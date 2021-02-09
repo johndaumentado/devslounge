@@ -29,7 +29,7 @@
 
         <!--Styles-->
 
-        <link href = "devslounge.css" rel = "stylesheet" type = "text/css">
+        <link href = "style/devslounge.css" rel = "stylesheet" type = "text/css">
 
 
     </head>
@@ -67,7 +67,7 @@
                             <!-- Developer Image --> 
                             <div class = "col-sm-3 col-md-6 col-lg-2" style = "background-color:pink;">
 
-                                <img src = "placeholder.jpg" alt = "dev-image" width = "90" height = "90" />
+                                <img src = "img/placeholder.jpg" alt = "dev-image" width = "90" height = "90" />
 
 
                             </div>
