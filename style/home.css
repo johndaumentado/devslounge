@@ -1,28 +1,11 @@
-/* DevsLounge CSS */
+/* Home CSS */
 
 /* Font Imports */
-
-/* Navbar */
-
-    .navbar-nav {
-        display: inline-block;
-        margin-right:100px;
-        padding: 5px 10px;
-        text-decoration: none;
-    }
-
-    .navbar-brand {
-        display: inline-block;
-        margin-left:100px;
-        padding: 5px 10px;
-        text-decoration: none;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 
 
-/* Home */
-
-    /* Container holding the image and the text */
+/* Container holding the image and the text */
     .container-fluid {
 
         position: relative;
@@ -30,11 +13,12 @@
         padding: 5px 10px;
         margin-left:200px;
         margin-right:200px;
-        color: white;
+        
     }
     
+
     /* Bottom left text */
-    .bottom-left {
+    .bottom-left { 
 
         position: absolute;
         bottom: 140px;
@@ -73,36 +57,47 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
-    
-    .img-with-text {
 
-        text-align: justify;
-        width: 150px;
-    }
     
-    .img-with-text img {
+    /* Featured Developers */
+    .panel {
 
-        display: block;
-        margin: 0 auto;
-    }
-    
-    .devsList{
+        border: 1px solid #98aae1;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        font-family: 'Calibri', sans-serif;
+        width: 250px;
+        min-height: 250px;
 
-        margin: auto;
-        width: 50%;
     }
 
-/* Profile */
+    .panel-heading {
 
-.dev-details {
+        padding-left:20px;
+        padding-bottom:30px;
+        font-size: 10pt;
+        line-height: 12pt;
+        background-color: #8367c7;
+        color: #ffff;
 
-    margin-top: 10px;
-    padding-top: 10px;
+
+    }
+
+    .panel-heading img {
+
+        width:30%;
+        margin-right:10px;
+        float:left;
+        border-radius: 100px;
+
+
+    }
+
+    b {
+
+        font-size:14pt;
+        letter-spacing: 1pt;
+    }
     
-}
+  
 
-.dev-desc {
-
-    padding: 20px;
-    
-}
