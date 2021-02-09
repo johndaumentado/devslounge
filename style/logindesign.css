@@ -20,7 +20,8 @@ h2 {
 
 /* Contents inside the Forms */
 #login{
-    border: solid gray 1px;
+    border: solid gray 3px;
+    /* background-color: rosybrown; */
     width: 500px;
 	border: 2px solid #ccc;
 	padding: 30px;
