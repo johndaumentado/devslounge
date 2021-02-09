@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    $_SESSION['type'] = "client";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,9 +23,21 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	<ul class="navbar-nav ml-auto">
-	<li class="nav-item"><a class="nav-link" href="#">Log-In</a></li>
-	<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-	<li class="nav-item"><a class="nav-link" href="#">Get Started!</a></li>
+    <?php
+        if(isset($_SESSION['type'])&& $_SESSION['type']=="admin"){
+            echo  '<li class="nav-item"><a class="nav-link" href="#">Control Panel</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Job Postings</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Log-out</a></li>'; //add a button for this instead. 
+        }else if(isset($_SESSION['type'])&& ( $_SESSION['type']=="developer" || $_SESSION['type']=="client" )){
+            echo  '<li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Job Postings</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Log-out</a></li>'; //add a button for this instead. 
+        }else{
+            echo  '<li class="nav-item"><a class="nav-link" href="#">Log-in</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Register</a></li>';
+        }
+    ?>
 	</ul>
   </div>
 </nav>
