@@ -81,10 +81,7 @@ hr {
       <h1><p style="color:White">Sign Up</p></h1>
       <p style="color:White">Please fill in this form to create an account.</p>
 	  
-	  <p style="color:White"><label for="name"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="user_id" required>
-	  
-	  <p style="color:White"><label for="name"><b>Name</b></label>
+	  <p style="color:White"><label for="name"><b>Full Name</b></label>
       <input type="text" placeholder="Enter Name" name="name" required>
 	  
 	  <p style="color:White"><label for="email"><b>Email</b></label>
@@ -113,7 +110,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 {
 $email = ($_POST['email']);
 $name = ($_POST['name']);
-$user_id = ($_POST['user_id']);
 $password = ($_POST['password']);
 
 $bool = true;
