@@ -8,14 +8,13 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
-
 <body>
 	<div id="login">
 		<form action="loginprocess.php" method="POST">
 			<h2> DevsLounge </h2>
 			<p>
-				<label>Username:</label>
-				<input type="text" id="user" name="user"  placeholder="Enter your Username..." />
+				<label>Email:</label>
+				<input type="text" id="email" name="email"  placeholder="Enter your Email Address..." />
 			</p>
 			<p>
 				<label>Password:</label>

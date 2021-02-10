@@ -1,5 +1,8 @@
 <!-- DevsLounge Home -->
-
+<?php 
+    //session_start();
+    //$_SESSION['type']= "client";
+?>
 <!DOCTYPE html>
 
 <html lang = "en">
