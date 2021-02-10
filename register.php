@@ -76,32 +76,35 @@ hr {
 </style>
 <body>
 <body style="background-color:black;">
-  <form class="modal-content" action="register.php">
-  <form action="register.php" method="POST">
-    <div class="container">
+	<form action="register.php" method="POST">
+    <div class="signup-form-form">
       <h1><p style="color:White">Sign Up</p></h1>
       <p style="color:White">Please fill in this form to create an account.</p>
-      <hr>
-      <p style="color:White"><label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" required>
+	  
+	  <p style="color:White"><label for="name"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="user_id" required>
 	  
 	  <p style="color:White"><label for="name"><b>Name</b></label>
       <input type="text" placeholder="Enter Name" name="name" required>
+	  
+	  <p style="color:White"><label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
 
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
 
       <label for="psw-repeat"><b>Repeat Password</b></label>
       <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+	  
       </p>
 
       <div class="clearfix">
         <button type="submit" class="signupbtn"><a href="login.php">Sign Up</button>
       </div>
+	  
     </div>
   </form>
 </div>
-
 </body>
 </html>
 
@@ -110,8 +113,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 {
 $email = ($_POST['email']);
 $name = ($_POST['name']);
+$user_id = ($_POST['user_id']);
 $password = ($_POST['password']);
+
 $bool = true;
+
 $db_name = "deliverydb";
 $db_email = "root";
 $db_pass = "";
