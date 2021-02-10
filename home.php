@@ -132,26 +132,7 @@
 					</div>
 				</div>
 
-				<!--Developer 1-->
-				<div class="col-sm">
-					<div class="panel">
-
-						<div class=panel-heading>
-							<img src = "img/sample-dev.png" alt="Perez-dev" />
-							<b>Joshua Perez</b>
-							<br />
-							Software Developer 
-							<br />
-							Php300.00/hour 
-
-						</div>
-
-						<div class=panel-body>
-							Insert Skills here
-						</div>
-
-					</div>
-				</div>
+				
 
 
 				
