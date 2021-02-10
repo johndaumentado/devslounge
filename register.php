@@ -113,13 +113,7 @@ $name = ($_POST['name']);
 $password = ($_POST['password']);
 
 $bool = true;
-
-$db_name = "deliverydb";
-$db_email = "root";
-$db_pass = "";
-$db_host = "localhost";
-$con = mysqli_connect("$db_host","$db_email","$db_pass", "$db_name") or
-die(mysqli_error()); //Connect to server
+include_once 'dbconnect.php'; //THIS IS TO CONNECT TO THE DB
 $query = "SELECT * from users";
 $results = mysqli_query($con, $query); //Query the users table
 while($row = mysqli_fetch_array($results)) //display all rows from query
