@@ -6,7 +6,9 @@
 
 ?>
 <!DOCTYPE html>
+
 <html lang = "en">
+
     <head>
         <meta charset="utf-8">
 
@@ -17,15 +19,83 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
         <!--Styles-->
-        <link href = "style/nav-footer.css" rel = "stylesheet" type = "text/css">
+
+
+		<style>
+
+		/* Font */
+		@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap');
+
+			.navbar {
+
+				min-height: 60px;
+				margin-bottom: 0 !important;
+				padding-bottom:20px;
+				border: 0;
+				border-radius: 0;
+				font-size: 14pt !important;
+				font-family: 'Quicksand', sans-serif;
+				font-weight: bold;
+				letter-spacing: 1px; 
+				display: block;
+				background-color: #ffffff;
+
+			}
+
+			.main-logo {
+				
+				position:fixed;
+				padding-left: 50px;
+				padding-top: 0;
+				top:0;
+				
+			}
+
+
+			.navbar-right {
+
+				list-style-type: none !important;
+				padding-top: 20px;
+				padding-right: 50px;
+
+			}
+
+			.navbar-right li a {
+
+				padding-left: 30px;
+				color: #00187a !important;
+				
+
+			}
+
+
+			.navbar-nav li a:hover {
+
+				color: #9f00e3  !important;
+				text-decoration: none !important;
+				transition:all .5s;
+
+			}
+
+		
+	
+
+		</style>
+
     </head>
+
+
     <body>
     <!-- Navbar -->
     <nav class = "navbar navbar-fixed-top">
+
       	<!-- Logo Heading -->
 	 	<a class="navbar-brand" href="#">
-    		<img src="img/devslounge-logo.png" width="210" height="60" alt="logo">
+		 	<div class=main-logo>
+    			<img src="img/devslounge-logo.png" width="250" height="70" alt="logo">
+			</div>
   		</a>
+
 		<!-- Navbar Collapse -->
        	<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -34,28 +104,35 @@
 
 			<!--Navbar Contents-->
 			<div class = "container-fluid">
-				<ul class = "nav navbar-nav navbar-right">
+				<ul class = "navbar-nav navbar-right">
+
 					<!--PHP -->
 					<?php
+
 						// If logged in as admin 
 						if(isset($_SESSION['type'])&& $_SESSION['type']=="admin") {
 
 							echo  '<li class="nav-item"><a class="nav-link" href="controlpanel.php">Control Panel</a></li>
 								<li class="nav-item"><a class="nav-link" href="jobpostings.php">Job Postings</a></li>
-								<li class="nav-item"><a class="nav-link" href="#">Log-out</a></li>'; //add a button for this instead. 
+								<li class="nav-item"><a class="nav-link" href="#">Log Out</a></li>'; //add a button for this instead. 
 						}
 						
 						// If logged in as Developer or Client
-						else if(isset($_SESSION['type'])&& ( $_SESSION['type']=="developer" || $_SESSION['type']=="client" )) {
+						else if(isset($_SESSION['type']) && ( $_SESSION['type']=="developer" || $_SESSION['type']=="client" )) {
 
 							echo  '<li class="nav-item"><a class="nav-link" href="jobpostings.php">Job Postings</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">About</a></li>
 									<li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
 								<li class="nav-item"><a class="nav-link" href="#">Log Out</a></li>'; //add a button for this instead. 
 						}
+
 						// User is not logged in (default navbar upon entering home page)
 						else {
 
-							echo  '<li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+							echo  '<li class="nav-item"><a class="nav-link" href="jobpostings.php">Job Postings</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">About</a></li>
 									<li class="nav-item"><a class="nav-link" href="login.php">Log In</a></li>
 									<li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>';
 						}
@@ -64,6 +141,9 @@
 				</ul>
 			</div>
         </nav>
+
+	
+
     </body>
 </html>
   
