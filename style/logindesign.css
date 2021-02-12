@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+/* Background of Login */
+body{
+    background: url('../img/background1.jpg');
+    display: flex;
+    /* background: linear-gradient(to right top, #E8DAEF, #4A235A); */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Header Forms */
+h2 {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+/* Contents inside the Forms */
+#login{
+    border: solid gray 3px;
+    background-color: wheat;
+    width: 500px;
+	border: 2px solid #ccc;
+	padding: 30px;
+    border-radius: 15px;
+}
+
+/* Circles on Background */
+.circle1,
+.circle2 {
+    background: white;
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+    );
+    height: 20rem;
+    width: 20rem;
+    position: absolute;
+    border-radius: 50%;
+
+}
+
+/* Circles Positioning */
+.circle1 {
+    top: 5%;
+    right: 15%;
+}
+
+.circle2{
+    bottom: 5%;
+    left: 10%;
+}
+
+/* Input types in the Form */
+input {
+	display: block;
+	border: 2px solid #ccc;
+	width: 95%;
+	padding: 10px;
+	margin-right: 10px auto;
+}
+
+/* Button Design */
+button{
+    color:#fff;
+    background: #555;
+    padding: 10px 185px;
+    border-radius: 5px;
+    margin-left: 15px;
+    border:none;
+}
+
+button:hover{
+    opacity: .8;
+}
+
+/* Register */
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

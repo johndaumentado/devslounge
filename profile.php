@@ -1,11 +1,16 @@
 <!-- Dev Profile -->
 <!DOCTYPE html>
+
 <html lang = "en">
+
     <head>
+
         <title>
             Profile | DevsLounge 
         </title>
+        
         <meta charset="utf-8">
+        
         <!--Boostrap-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -18,10 +23,11 @@
 
         <!--Styles-->
 
-        <link href = "style/devslounge.css" rel = "stylesheet" type = "text/css">
+        <link href = "style/styles.css" rel = "stylesheet" type = "text/css">
 
 
     </head>
+
     <body>
 
         <!-- Navigation Bar -->
@@ -47,12 +53,12 @@
                 <!-- First Row -->
                 <div class = "row">
 
-                    <div class = "col-sm-12 col-md-12 col-lg-12"> 
+                    <div class = "col-sm-12 col-md-12"> 
 
                         <div class = "dev-details">
 
                             <!-- Developer Image --> 
-                            <div class = "col-sm-3 col-md-6 col-lg-2" style = "background-color:pink;">
+                            <div class = "col-sm-3 col-md-6" style = "background-color:pink;">
 
                                 <img src = "img/placeholder.jpg" alt = "dev-image" width = "90" height = "90" />
 
@@ -60,7 +66,7 @@
                             </div>
 
                             <!-- Developer Name and Ratings --> 
-                            <div class = "col-sm-9 col-md-6 col-lg-10" style = "background-color:blue;">
+                            <div class = "col-sm-9 col-md-6" style = "background-color:blue;">
 
                                 <h2>Developer Name Here</h2>
 
@@ -84,7 +90,7 @@
                 <!-- Second Row -->
                 <div class = "row">
 
-                    <div class = "col-sm-12 col-md-12 col-lg-12" style = "background-color:green;"> 
+                    <div class = "col-sm-12 col-md-12" style = "background-color:green;"> 
 
                         <div class = "dev-desc">
 
