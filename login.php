@@ -14,7 +14,7 @@
 			<h2> DevsLounge </h2>
 			<p>
 				<label>Email:</label>
-				<input type="text" id="email" name="email"  placeholder="Enter your Email Address..." />
+				<input type="text" id="user" name="user"  placeholder="Enter your Email..." />
 			</p>
 			<p>
 				<label>Password:</label>
@@ -27,5 +27,7 @@
 			<a href="register.php">Click Here to Register!</a>
 		</form>
 	</div>
+	<div class="circle1"></div>
+	<div class="circle2"></div>
 </body>
 </html>
