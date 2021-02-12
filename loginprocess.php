@@ -2,12 +2,13 @@
 session_start();
 $username = ($_POST['user']);
 $password = ($_POST['pass']);
-$db_name = "test_db"; // Subject to change
+$db_name = "deliverydb"; // Subject to change depending on name of database
 $db_username = "root";
 $db_pass = "";
-$db_host = "localhost";
-$con = mysqli_connect("$db_host", "$db_username", "$db_pass", "$db_name") or
-    die(mysqli_error()); //Connect to server
+$db_host = "localhost"; 
+$con = mysqli_connect("$db_host", "$db_username", "$db_pass", "$db_name");
+
+
 $query = "SELECT * from users WHERE username='$username'";
 $results = mysqli_query($con, $query); //Query the users table if there are matching rows equal to $username
 $exists = mysqli_num_rows($con, $query); //Checks if username exists
@@ -26,6 +27,7 @@ if($results != "") //IF there are no returning rows or no existing username
         {
             $_SESSION['user'] = $username; //set the username in a session. This serves as a global variable
             header("location: home.php"); // redirects the user to the authenticated homepage
+            echo "Hello";
         }
         else
         {
@@ -40,3 +42,18 @@ if($results != "") //IF there are no returning rows or no existing username
     }
 }
 ?>
+
+<?php
+/*
+$server_name = "localhost";
+$db_username = "root";
+$db_password = "";
+$db_name = "sample_project";
+
+$conn = mysqli_connect($server_name, $db_username, $db_password, $db_name);
+
+if(!$conn){
+    die("Connection Failed: " . mysqli_connect_error());
+}
+*/
+

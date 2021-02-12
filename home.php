@@ -1,14 +1,32 @@
+<!-- Added for confirmation -->
+<?php
+session_start();
+
+if (isset($_SESSION['id'])){
+
+}
+?>
+
+<!-- End -->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <link rel="stylesheet" href="style/devslounge.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"> </script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 <?php include('navbar.php'); ?>
+
+<!-- Added the Echo Command -->
+<h1> Hello, <?php  echo $_SESSION['user'] ?> </h1> 
+
+
 <div class="container-fluid">
   <img src="img/placeholderIMG.png" alt="Home Image" style="width:100%;">
   <div class="centered"><h1>Placeholder Text</h1> above Placeholder Image</div>
