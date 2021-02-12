@@ -148,23 +148,48 @@
     <th>Job Posting ID Number</th>
     <th>Title</th>
     <th>Description</th>
+    <th>Preferred Skill</th>
     <th>Client Name</th>
     <th>Status</th>
     <th>Developer Complete</th>
     </tr>
 
+    <?php
+
+if($_SERVER['REQUEST_METHOD'] = "POST") //Added an if to keep the page secured
+{
+    $title = ($_POST['title']);
+    $description = ($_POST['description']);
+
+    $status ="Hiring";    //For the status
+    $skill_id =($_POST['skill_id']);    //For the status
+    $con = mysqli_connect("localhost", "root", "", "devslounge") or die(mysqli_error()); //Connect to server
+    
+    mysqli_query($con, "INSERT INTO job_postings (title, description, status, skill_id) VALUES  ('$title','$description','$status', '$skill_id')"); //SQL query
+}
+//  else
+// {
+// header("location:home.php"); //redirects back to home
+// }
+
+?>
+
+
+
+
  <?php
-    $con = mysqli_connect("localhost", "root", "", "deliverydb") or die(mysqli_error()); //Connect to server
-    $query = mysqli_query($con, "Select * from list"); // SQL Query
+    $con = mysqli_connect("localhost", "root", "", "devslounge") or die(mysqli_error()); //Connect to server db name:[devslounge]
+    $query = mysqli_query($con, "Select * from job_postings"); // SQL Query
     while($row = mysqli_fetch_array($query))
     {
     Print "<tr>";
     Print '<td align="center">'. $row['job_id'] . "</td>";                      //For getting the job ID from the database
     Print '<td align="center">'. $row['title'] . "</td>";                       //For getting the job title from the database
     Print '<td align="center">'. $row['description'] . "</td>";                 //For getting the job description from the database
-    Print '<td align="center">'. $row['client_post'] . "</td>";                 //For getting the client's post from the database
+    Print '<td align="center">'. $row['skill_id'] . "</td>";                 //For getting the preferred skill of the developer from the database
+    Print '<td align="center">'. $row['client_id'] . "</td>";                   //For getting the client's id from the database
     Print '<td align="center">'. $row['status'] . "</td>";                      //For getting the status of the job from the database
-    Print '<td align="center">'. $row['dev_complete'] . "</td>";                //For getting the 
+    Print '<td align="center">'. $row['dev_id'] . "</td>";                      //For getting the developer's id
 //    Print '<td align="center">'. $row['date_edited']. " - ". $row['time_edited']. "</td>";
 //    Print '<td align="center"><a href="#" onclick="myFunction('.$row['id'].')">delete</a> </td>';
 //   Print '<td align="center">'. $row['public']. "</td>";
@@ -174,40 +199,26 @@
 
  </table>
 
-<form action="addJob" method="POST">
-<br><br><br>
+ <form action="jobpostings.php" method="POST">
+    <br><br><br>
 
-    Add a job posting? <br/>
+    Add a job posting: <br/>
 
     Job Title: <input type="text" name="title"/><br/>
     Description: <input type="text" name="description"/><br/>
+    <p>Preferred Skill: </p><select name="skill_id" id="skill_id" value="skill_id" style="font-family: Josefin Sans; font-size: 20px;" >
+                            <option value="HTML" style="font-family: Josefin Sans; font-size: 20px;">HTML / CSS</option>
+                            <option value="C++" style="font-family: Josefin Sans; font-size: 20px;">C++</option>
+                            <option value="Phython" style="font-family: Josefin Sans; font-size: 20px;">Phython/option>
+                            <option value="Java" style="font-family: Josefin Sans; font-size: 20px;">Java</option>
+                            <option value="C#" style="font-family: Josefin Sans; font-size: 20px;">C#</option>
+                        </select>
     <input type="submit" value="Add to list"/>
 
 </form>
 
-<script>
-    function addJob(id)
-    {
-        session_start();
 
-
-        //if($_SERVER['REQUEST_METHOD'] = "POST") //Added an if to keep the page secured
-        //{
-            $title = ($_POST['title']);
-            $description = ($_POST['description']);
-
-            $status ="Hiring";    //For the status
-            $con = mysqli_connect("localhost", "root", "", "deliverydb") or die(mysqli_error()); //Connect to server
-            
-            mysqli_query($con, "INSERT INTO list (title, description, status) VALUES  ('$title','$description','$status')"); //SQL query
-    //    }
-      //  else
-       // {
-       // header("location:home.php"); //redirects back to home
-       // }
-    }
-    </script>
-
+ 
 
 
 </div>
