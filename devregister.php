@@ -93,12 +93,12 @@ hr {
       <label for="psw-repeat"><b>Repeat Password</b></label>
       <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 	  <p style="color:White"><label for="name"><b>Which Programming Languages do you use?</b></label><br />
-		<input type="checkbox" name="language[]" value="html" />HTML/CSS<br />
-		<input type="checkbox" name="language[]" value="php" />PHP<br />
-		<input type="checkbox" name="language[]" value="cplus" />C++<br />
-		<input type="checkbox" name="language[]" value="python" />Python<br />
-		<input type="checkbox" name="language[]" value="java" />Java<br />
-		<input type="checkbox" name="language[]" value="csharp" />C#<br />
+		<input type="checkbox" name="language[]" value="HTML/CSS" />HTML/CSS<br />
+		<input type="checkbox" name="language[]" value="PHP" />PHP<br />
+		<input type="checkbox" name="language[]" value="C++" />C++<br />
+		<input type="checkbox" name="language[]" value="Python" />Python<br />
+		<input type="checkbox" name="language[]" value="Java" />Java<br />
+		<input type="checkbox" name="language[]" value="C#" />C#<br />
 		<br />
       </p>
       <div class="clearfix">
