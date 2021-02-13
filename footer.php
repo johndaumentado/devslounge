@@ -125,7 +125,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center text-white">
                         <div class="footer-about">
                             DevsLounge is a remote job platform for developers around the world.
-                            <p class="h6">© All right Reversed. Luxembourg. </p>
+                            <p class="h6">© All Rights Reserved. Luxembourg. </p>
                         </div>
                     </div>
                   
