@@ -19,15 +19,28 @@
 
     if($comparisonCheck==true){
         mysqli_query($conn, "INSERT INTO users (name, email, password, type) VALUES ('$name','$email','$password','dev')"); //Inserts the value to table users
-        $dev_idTemp = mysqli_insert_id($conn);
         mysqli_query($conn, "INSERT INTO dev (status, user_id) VALUES('idle', LAST_INSERT_ID())");
-        
+        $dev_idTemp = mysqli_insert_id($conn);
+
         // Currently, the database is picking up on the insert. Dev_skill_id is being incremented, but the parameters 
         // dev_id and skill_id is not being shown (resulting in no rows being made). Possibly a mistake in the WHERE
         // condition. WHERE condition is set to '1' only for testing purposes. The intended variable in the condition
         // should be "language[]". Looping also unsure.
- 
-        mysqli_query($conn, "INSERT INTO dev_skills (dev_id, skill_id) SELECT '$dev_idTemp', skill_id FROM skills WHERE skill_id='1'");
+        
+        $skillQuery = "INSERT INTO dev_skills (dev_id, skill_id) SELECT";
+        for ($i=0; $i<count($language); $i++)
+            $skillQuery .= " ('" . $dev_idTemp ."'," . "skills.skills_id)";
+        $skillQuery = rtrim($skillQuery,',');
+        $skillQuery .= " FROM skills WHERE skills.name IN (";
+        for ($i=0; $i<count($language); $i++)
+            $skillQuery .= "'$language[$i]',";
+        $skillQuery = rtrim($skillQuery,',');
+        $skillQuery .= ")";
+        mysqli_query($conn, $skillQuery);
+        echo $dev_idTemp;
+        echo "<br/>".$skillQuery."<br/>";
+        for ($i=0; $i<count($language); $i++)
+            echo $language[$i];
         Print '<script>alert("Successfully Registered!");</script>'; // Prompts the user
         echo "it works.";
         }
