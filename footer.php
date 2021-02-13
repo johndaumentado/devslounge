@@ -95,7 +95,7 @@
                     <!--Logo-->
                     <div class="col-sm-4 col-md-4 col-lg-4">
 
-                            <img src="img/devslounge-logo.png" width="200" height="55" alt="logo">  
+                            <img src="img/devslounge-logo.png" width="200" height="58" alt="logo">  
 
                     </div>
 

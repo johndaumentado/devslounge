@@ -1,3 +1,8 @@
+/*Login CSS */
+
+
+/*Font Imports*/
+
 *{
     margin: 0;
     padding: 0;
@@ -6,13 +11,10 @@
 }
 
 /* Background of Login */
-body{
-    background: url('../img/background1.jpg');
-    display: flex;
-    /* background: linear-gradient(to right top, #E8DAEF, #4A235A); */
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+body {
+
+    background-color: red;
+
 }
 
 /* Header Forms */
@@ -23,11 +25,10 @@ h2 {
 
 /* Contents inside the Forms */
 #login{
-    border: solid gray 3px;
-    background-color: wheat;
+    background-color: #ffff;
     width: 500px;
 	border: 2px solid #ccc;
-	padding: 30px;
+	padding: 50px;
     border-radius: 15px;
 }
 
