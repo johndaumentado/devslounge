@@ -38,7 +38,7 @@
 
 		<!-- Navbar -->
 
-		<?php include('navbar.php'); ?>
+		<?php include('user-navbar.php'); ?>
 
 
 		
