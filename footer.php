@@ -21,26 +21,31 @@
         <!--Styles-->
 
         <style>
+        /* Font Import */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
         section {
 
             padding-top:50px;
+            bottom: 0;
+
         }
 
         #footer {
 
             left: 0;
-            bottom: 0;
+            bottom: 0 !important; 
             width: 100%;
             background-color: #02010a;
-            font-family: Arial, sans-serif;
             color: #f3ecfe;
+            
         }
 
         #footer li a {
 
             color: #f3ecfe;
             text-decoration: none !important;
+            font-family: 'Roboto', sans-serif;
         }
 
         #footer li a:hover {
@@ -63,6 +68,7 @@
             padding-top:60px;
             padding-bottom:20px;
             font-size:10pt;
+            
         }
 
 

@@ -1,0 +1,42 @@
+/* Contact CSS */
+
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.contact-heading {
+
+    font-size: 24pt !important;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bolder;
+    text-align:center;
+    background-color: #ffffff;
+    color:#4338bc;
+    padding-top:30px;
+
+}
+
+.contact-contents {
+
+    margin-top:10px;
+    padding:50px;
+}
+
+
+.contact-text {
+
+    padding-top:10px;
+    padding-right:50px;
+    width:100%;
+    position:absolute;
+    text-align:center;
+    font-family: 'Roboto', sans-serif;
+    color:#4e148c;
+    font-size:14pt;
+   
+}
+
+.contact-forms {
+
+    text-align:left;
+}
