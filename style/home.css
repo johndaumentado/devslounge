@@ -1,7 +1,41 @@
 /* Home CSS */
+/* About CSS */
 
 /* Font Imports */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.home-heading {
+
+    font-size: 24pt !important;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bolder;
+    text-align:center;
+    background-color: #ffffff;
+    color:#4338bc;
+    padding-top:30px;
+
+}
+
+.home-contents {
+
+    margin-top:10px;
+    padding:50px;
+}
+
+
+.home-text {
+
+    margin-top: 10px;
+    padding-top:30px;
+    padding-right:50px;
+    position:absolute;
+    text-align:justify;
+    font-family: 'Roboto', sans-serif;
+    color:#4e148c;
+    font-size:14pt;
+   
+}
 
 
 

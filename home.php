@@ -27,7 +27,7 @@
 
         <!--Styles-->
 
-        <link href = "style/styles.css" rel = "stylesheet" type = "text/css">
+        <link href = "style/home.css" rel = "stylesheet" type = "text/css">
 
 
     </head>
@@ -56,12 +56,6 @@
 
 				<div class="col-lg-6">
 
-					<img src="img/home.png" width="500" height="500" alt="logo">
-				
-				</div>
-
-				<div class="col-lg-6">
-
 					<!--Heading-->
 					<div class = "container-fluid">
 
@@ -86,6 +80,13 @@
 					Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 
 					</div>                
+				</div>
+
+
+				<div class="col-lg-6">
+
+					<img src="img/home.png" width="500" height="500" alt="logo">
+				
 				</div>
 				
 			</div>
