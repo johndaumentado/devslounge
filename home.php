@@ -123,7 +123,7 @@
 
 					<div class="col-lg-6">
 
-						<img src="img/home.png" width="600" height="600" alt="logo">
+						<img src="img/home.png" width="600" height="600" alt="home">
 					
 					</div>
 					

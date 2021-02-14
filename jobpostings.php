@@ -49,10 +49,7 @@
 
         <?php include('navbar.php'); ?>
 
-        <br />
-        <br />
-        <br />
-        <br />
+      
 
 
         <!--Job Postings Heading-->
@@ -63,7 +60,7 @@
 
                 <div class="row">
 
-                    <div class="col-lg-6" style ="background-color:blue;">
+                    <div class="col-lg-6">
 
 
                         <!--Heading-->
@@ -91,9 +88,9 @@
                     </div>
 
 
-                    <div class="col-lg-6" style ="background-color:red;">
+                    <div class="col-lg-6">
 
-                        <center><img src="img/jobpostings.png" width="500" height="500" alt="jobpostings">
+                        <center><img src="img/jobpostings.png" width="600" height="600" alt="jobpostings">
                     
                     </div>
                     
@@ -111,7 +108,7 @@
             
             <div class="table">
         
-                <table width="100%">
+                <table>
 
                     <!--Table Heading-->
                     <tr>
