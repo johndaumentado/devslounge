@@ -26,6 +26,67 @@
 
         <link href = "style/contact.css" rel = "stylesheet" type = "text/css">
 
+        <style>
+        /*Forms*/
+        input {
+
+        display: block;
+        border: 2px solid #ccc;
+        width: 95%;
+        padding: 10px;
+        margin-right: 10px auto;
+        border: 3px solid #b79ced;
+        border-radius:20px;
+        font-family:'Roboto', sans-serif;
+        }
+
+        input:focus {
+
+        background-color: #ffff;
+        outline: none;
+        }
+
+        /*Forms*/
+        textarea {
+
+        display: block;
+        border: 2px solid #ccc;
+        width: 95%;
+        padding: 10px;
+        margin-right: 10px auto;
+        border: 3px solid #b79ced;
+        border-radius:20px;
+        font-family:'Roboto', sans-serif;
+        }
+
+        textarea:focus {
+
+        background-color: #ffff;
+        outline: none;
+        }
+
+        /* Button Design */
+		input[type=submit] {
+
+        color:#fff;
+        background-color: #957fef;
+        padding: 10px;
+        border-radius: 5px;
+        width:95%;
+        border: none;
+        border-radius:20px;
+        float:center;
+        font-family:'Roboto', sans-serif;
+        font-size:14pt;
+        }
+
+        input[type=submit]:hover{
+        opacity: .8;
+        transition:all .5s;
+        }
+
+        </style>
+
 
 
 
@@ -79,7 +140,7 @@
 
                                 <div class = "contact-forms">
 
-                                    <form method="post" name="contact_form" action="contactprocess.php">
+                                    <form method="post" name="contact_form">
                                         
                                         First Name <input type = "text" name = "first_name">
 
@@ -91,8 +152,9 @@
 
                                         Message
                                         <br /> <textarea rows="5" name="message" cols="30"></textarea>
+                                        <br />
 
-                                        <input type="submit" name="submit" value="Submit">
+                                        <input type="submit" name="submit" value="Submit"  onclick="showAlert()">
 
                                     </form>
                                 </div>
@@ -117,6 +179,15 @@
 
     <!--Footer-->
 	<?php include('footer.php'); ?>
+
+
+
+        <script>
+            function showAlert() {
+                var myText = "Thank you for leaving a message! Your response has been received.";
+                alert (myText);
+            }
+        </script>
 
     </body>
 
