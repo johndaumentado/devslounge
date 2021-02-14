@@ -76,7 +76,7 @@ hr {
 </style>
 <body>
 <body style="background-color:black;">
-	<form action="register.php" method="POST">
+	<form action="includes/clientRegProcess.php" method="POST">
     <div class="signup-form-form">
       <h1><p style="color:White">Client Sign Up</p></h1>
       <p style="color:White">Please fill in this form to create an account.</p>
@@ -92,7 +92,7 @@ hr {
       <input type="text" placeholder="Enter Email" name="email" required>
 		
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input type="password" placeholder="Enter Password" name="password" required>
 
       <label for="psw-repeat"><b>Repeat Password</b></label>
       <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
@@ -108,35 +108,3 @@ hr {
 </div>
 </body>
 </html>
-
-<?php
-if($_SERVER["REQUEST_METHOD"] == "POST")
-{
-$email = ($_POST['email']);
-$name = ($_POST['name']);
-$password = ($_POST['password']);
-$company = ($_POST['company']);
-
-$bool = true;
-include_once 'dbconnect.php'; //THIS IS TO CONNECT TO THE DB
-$query = "SELECT * from users";
-$results = mysqli_query($con, $query); //Query the users table
-while($row = mysqli_fetch_array($results)) //display all rows from query
-{
-$table_users = $row['email']; // the first email row is passed on to $table_users, and so on until the query is finished
-if($email == $table_users) // checks if there are any matching fields
-{
-$bool = false; // sets bool to false
-Print '<script>alert("email has been taken!");</script>'; //Prompts the user
-Print '<script>window.location.assign("register.php");</script>'; // redirects to register.php
-}
-}
-if($bool) // checks if bool is true
-{
-mysqli_query($con, "INSERT INTO users (email, password) VALUES
-('$email','$password')"); //Inserts the value to table users
-Print '<script>alert("Successfully Registered!");</script>'; // Prompts the user
-Print '<script>window.location.assign("register.php");</script>'; // redirects to register.php
-}
-}
-?>
