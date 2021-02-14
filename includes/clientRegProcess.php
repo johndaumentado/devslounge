@@ -3,7 +3,7 @@
     $email = ($_POST['email']);
     $name = ($_POST['name']);
     $password = ($_POST['password']);
-    $language = ($_POST['language']);
+    $company = ($_POST['company']);
     $comparisonCheck = true;
     $query = "SELECT * from users";
     $results = mysqli_query($conn, $query); //Query the users table
@@ -16,15 +16,10 @@
             break;
         }
     }
-
     if($comparisonCheck==true){
-        mysqli_query($conn, "INSERT INTO users (name, email, password, type) VALUES ('$name','$email','$password','dev')"); //Inserts the value to table users
-        mysqli_query($conn, "INSERT INTO dev (status, user_id) VALUES('idle', LAST_INSERT_ID())");
+        mysqli_query($conn, "INSERT INTO users (name, email, password, type) VALUES ('$name','$email','$password','client')"); //Inserts the value to table users
+        mysqli_query($conn, "INSERT INTO client (company, user_id) VALUES('$company', LAST_INSERT_ID())");
         $dev_idTemp = mysqli_insert_id($conn);
-        
-        for($i=0, $i<count($language); $i++)
-            mysqli_query($conn, "INSERT INTO dev_skills (dev_id, skill_id) SELECT '$dev_idTemp', skills.skill_id FROM skills WHERE skills.name='$language[$i]'");
-        Print '<script>alert("Successfully Registered!");</script>'; // Prompts the user
         header("Location: ../home.php");
         }
 ?>
