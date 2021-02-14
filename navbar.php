@@ -103,7 +103,7 @@
   		</a>';
 		}
 
-		// If logged in as clientt / dev / not logged in yet
+		// If logged in as client / dev / not logged in yet
 		else {
 
 			echo '<a class="navbar-brand" href="home.php">
