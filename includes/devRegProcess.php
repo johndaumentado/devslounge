@@ -25,6 +25,6 @@
         for($i=0; $i<count($language); $i++)
             mysqli_query($conn, "INSERT INTO dev_skills (dev_id, skill_id) SELECT '$dev_idTemp', skills.skill_id FROM skills WHERE skills.name='$language[$i]'");
         Print '<script>alert("Successfully Registered!");</script>'; // Prompts the user
-        header("Location: ../home.php");
+        header("Location: ../login.php");
         }
 ?>
