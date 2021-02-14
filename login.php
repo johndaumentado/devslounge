@@ -42,6 +42,26 @@
 
 		}
 
+		/* Register */
+		h4 {
+
+		text-align:center;
+		font-family:'Quicksand', sans-serif;
+		font-size:12pt;
+		color:#360568;
+
+		}
+
+		a {
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family:'Roboto', sans-serif;
+		color:#7161ef;
+		font-size:10pt;
+		}
+
 		</style>
 		
 
