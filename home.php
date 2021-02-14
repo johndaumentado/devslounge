@@ -23,11 +23,51 @@
 
         <!--Icon-->
 
-        <!-- <link rel = "icon" href = "title-icon.png"> -->
+        <link rel = "icon" href = "logo-icon.png">
 
         <!--Styles-->
 
     	<link href = "style/home.css" rel = "stylesheet" type = "text/css">
+
+		<style>
+
+		/* Font Imports */
+		@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+		.home-heading {
+
+			font-size: 24pt !important;
+			font-family: 'Quicksand', sans-serif;
+			font-weight: bolder;
+			text-align:center;
+			background-color: #ffffff;
+			color:#4338bc;
+			padding-top:30px;
+
+		}
+
+		.home-contents {
+
+			margin-top:10px;
+			padding:50px;
+		}
+
+
+		.home-text {
+
+			margin-top: 10px;
+			padding-top:30px;
+			padding-right:50px;
+			position:absolute;
+			text-align:justify;
+			font-family: 'Roboto', sans-serif;
+			color:#4e148c;
+			font-size:14pt;
+		
+		}
+
+		</style>
 
 	
 
@@ -51,47 +91,44 @@
 
 		<div class="container-fluid">
 
-		<div class = "home-contents">
+			<div class = "home-contents">
 
-			<div class="row">
+				<div class="row">
 
-				<div class="col-lg-6">
+					<div class="col-lg-6">
 
-					<!--Heading-->
-					<div class = "container-fluid">
+						<!--Heading-->
+						<div class = "container-fluid">
 
-						<div class = "home-heading">
+							<div class = "home-heading">
 
-							<div class = "row"> 
+								<div class = "row"> 
 
-								Welcome to DevsLounge!
+									Welcome to DevsLounge!
 
+								</div>
 							</div>
+
 						</div>
 
+						<div class = "home-text">
+
+	
+						
+						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+						</div>                
 					</div>
 
-					<div class = "home-text">
 
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					<div class="col-lg-6">
+
+						<img src="img/home.png" width="600" height="600" alt="logo">
 					
-					<br />
-					<br />
+					</div>
 					
-					Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-
-					</div>                
 				</div>
-
-
-				<div class="col-lg-6">
-
-					<img src="img/home.png" width="500" height="500" alt="logo">
-				
-				</div>
-				
 			</div>
-		</div>
 
 		</div>
 

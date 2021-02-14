@@ -37,19 +37,6 @@
 }
 
 
-
-/* Container holding the image and the text */
-    .container-fluid {
-
-        position: relative;
-        text-align: center;
-        padding: 5px 10px;
-        margin-left:200px;
-        margin-right:200px;
-        
-    }
-    
-
     /* Bottom left text */
     .bottom-left { 
 
