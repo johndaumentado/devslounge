@@ -80,7 +80,7 @@
 
     <!-- Navbar -->
 
-		<?php include('navbar.php'); ?>
+		<?php include('admin-nav.php'); ?>
 
             <h2 align="center">Job Postings</h2>
             <table>

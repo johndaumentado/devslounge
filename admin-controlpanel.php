@@ -85,7 +85,7 @@
 
     <!-- Navbar -->
 
-		<?php include('navbar.php'); ?>
+		<?php include('admin-nav.php'); ?>
 
         <br />
         <br />
