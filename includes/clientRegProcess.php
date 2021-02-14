@@ -19,6 +19,7 @@
     if($comparisonCheck==true){
         mysqli_query($conn, "INSERT INTO users (name, email, password, type) VALUES ('$name','$email','$password','client')"); //Inserts the value to table users
         mysqli_query($conn, "INSERT INTO client (company, user_id) VALUES('$company', LAST_INSERT_ID())");
+        Print '<script>alert("Successfully Registered!");</script>'; // Prompts the user
         header("Location: ../login.php");
         }
 ?>
