@@ -68,7 +68,23 @@
             padding-top:60px;
             padding-bottom:20px;
             font-size:10pt;
+
             
+        }
+
+        .footer-about a {
+
+            color:#ffff;
+
+        }
+
+        .footer-about a:hover {
+
+            text-decoration:none;
+            font-weight:bold;
+            transition:all .5s;
+            color:#ffff;
+
         }
 
 
@@ -132,6 +148,7 @@
                         <div class="footer-about">
                             DevsLounge is a remote job platform for developers around the world.
                             <p class="h6">© All Rights Reserved. Luxembourg. </p>
+                            <p class="h6"><a href="https://storyset.com/work">Illustrations by Freepik Storyset</a></p>
                         </div>
                     </div>
                   
