@@ -46,4 +46,22 @@
 table {
 
     width:100%;
+    padding:10px;
+}
+
+.table {
+
+    padding:10px;
+}
+
+input[type=text] {
+
+    display: block;
+	border: 2px solid #ccc;
+	width: 95%;
+	padding: 10px;
+	margin-right: 10px auto;
+	border: 3px solid #b79ced;
+	border-radius:20px;
+	font-family:'Roboto', sans-serif;
 }
