@@ -66,7 +66,7 @@
 				</p>
 
 				<div class="clearfix">
-					<button type="submit" class="signupbtn"><a href="login.php">Sign Up</button>
+					<button type="submit" class="signupbtn">Sign Up</button>
 				</div>
 				
 				</div>
