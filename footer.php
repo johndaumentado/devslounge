@@ -21,26 +21,31 @@
         <!--Styles-->
 
         <style>
+        /* Font Import */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
         section {
 
             padding-top:50px;
+            bottom: 0;
+
         }
 
         #footer {
 
             left: 0;
-            bottom: 0;
+            bottom: 0 !important; 
             width: 100%;
             background-color: #02010a;
-            font-family: Arial, sans-serif;
             color: #f3ecfe;
+            
         }
 
         #footer li a {
 
             color: #f3ecfe;
             text-decoration: none !important;
+            font-family: 'Roboto', sans-serif;
         }
 
         #footer li a:hover {
@@ -63,6 +68,7 @@
             padding-top:60px;
             padding-bottom:20px;
             font-size:10pt;
+            
         }
 
 
@@ -89,7 +95,7 @@
                     <!--Logo-->
                     <div class="col-sm-4 col-md-4 col-lg-4">
 
-                            <img src="img/devslounge-logo.png" width="200" height="55" alt="logo">  
+                            <img src="img/devslounge-logo.png" width="200" height="58" alt="logo">  
 
                     </div>
 
@@ -125,7 +131,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center text-white">
                         <div class="footer-about">
                             DevsLounge is a remote job platform for developers around the world.
-                            <p class="h6">© All right Reversed. Luxembourg. </p>
+                            <p class="h6">© All Rights Reserved. Luxembourg. </p>
                         </div>
                     </div>
                   

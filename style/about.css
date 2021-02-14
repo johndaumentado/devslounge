@@ -1,10 +1,10 @@
-/* Home CSS */
+/* About CSS */
 
 /* Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-.job-heading {
+.about-heading {
 
     font-size: 24pt !important;
 	font-family: 'Quicksand', sans-serif;
@@ -12,38 +12,26 @@
     text-align:center;
     background-color: #ffffff;
     color:#4338bc;
-    padding-top:150px;
-    padding-left:50px;
+    padding-top:30px;
 
 }
 
-.job-contents {
+.about-contents {
 
     margin-top:10px;
-    padding:30px;
-}
-
-.job-contents img {
-
-    padding:0;
+    padding:50px;
 }
 
 
-.job-text {
+.about-text {
 
     margin-top: 10px;
     padding-top:30px;
-    padding-left:50px;
+    padding-right:50px;
     position:absolute;
     text-align:justify;
     font-family: 'Roboto', sans-serif;
     color:#4e148c;
     font-size:14pt;
    
-}
-
-
-table {
-
-    width:100%;
 }

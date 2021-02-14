@@ -1,3 +1,62 @@
+
+
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
 /*Login CSS */
 	
 		/* Font Imports */
@@ -21,23 +80,6 @@
 			height: 100vh;
 
 		}
-
-		/* Circles on Background */
-		.circle1,
-		.circle2 {
-			background: white;
-			background: linear-gradient(
-				to right bottom,
-				rgba(255, 255, 255, 0.7),
-				rgba(255, 255, 255, 0.3)
-			);
-			height: 20rem;
-			width: 20rem;
-			position: absolute;
-			border-radius: 50%;
-
-		}
-
 
 		/*Heading*/
 		.heading {
@@ -63,7 +105,7 @@
 		}
 
 		/* Input types in the Form */
-		input {
+		input[type=text], input[type=password] {
 
 			display: block;
 			border: 2px solid #ccc;
@@ -75,11 +117,10 @@
 			font-family:'Roboto', sans-serif;
 		}
 
-        input:focus {
-
+        input[type=text]:focus, input[type=password]:focus {
             background-color: #ffff;
             outline: none;
-        }
+          }
 
 		/* Button Design */
 		button {
@@ -98,7 +139,6 @@
 
 		button:hover{
 			opacity: .8;
-			transition:all .5s;
 		}
 
 		/* Register */

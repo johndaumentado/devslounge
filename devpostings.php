@@ -154,7 +154,6 @@
 
     <h2>Home Page</h2><br>
 
-
     <div class=row>
     
     <div class="table">
@@ -163,18 +162,16 @@
     <tr>
     <th>Developer ID Number</th>
     <th>Skills</th>
-    <th>Status</th>
     </tr>
 
  <?php
-    $con = mysqli_connect("localhost", "root", "", "deliverydb") or die(mysqli_error()); //Connect to server
-    $query = mysqli_query($con, "Select * from list"); // SQL Query
+    $con = mysqli_connect("localhost", "root", "", "devslounge") or die(mysqli_error()); //Connect to server
+    $query = mysqli_query($con, "Select * from dev_skills"); // SQL Query
     while($row = mysqli_fetch_array($query))
     {
     Print "<tr>";
     Print '<td align="center">'. $row['dev_id'] . "</td>";                  //For getting the developer ID from the database
-    Print '<td align="center">'. $row['skills'] . "</td>";                  //For getting the developer's skills from the database
-    Print '<td align="center">'. $row['status'] . "</td>";                  //For getting the developer's status from the database  
+    Print '<td align="center">'. $row['dev_skill_id'] . "</td>";                  //For getting the developer's skills from the database
 //    Print '<td align="center">'. $row['date_edited']. " - ". $row['time_edited']. "</td>";
 //    Print '<td align="center"><a href="edit.php?id='. $row['id'] .'">edit</a> </td>';
 //    Print '<td align="center"><a href="#" onclick="myFunction('.$row['id'].')">delete</a> </td>';

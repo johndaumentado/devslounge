@@ -1,8 +1,8 @@
 <!-- Navbar -->
 <?php
 
-    //session_start();
-    //$_SESSION['type'] = "client";
+    session_start();
+    $_SESSION['type'] = "client";
 
 ?>
 <!DOCTYPE html>
@@ -39,6 +39,7 @@
 				letter-spacing: 1px; 
 				display: block;
 				background-color: #ffffff;
+				
 
 			}
 
@@ -90,14 +91,37 @@
     <nav class = "navbar navbar-fixed-top">
 
       	<!-- Logo Heading -->
-	 	<a class="navbar-brand" href="#">
+		<?php
+
+		// If logged in as admin
+		if(isset($_SESSION['type'])&& $_SESSION['type']=="admin") {
+
+			echo '<a class="navbar-brand" href="home.php">
+		 	<div class=main-logo>
+    			<img src="img/devslounge-admin.png" width="480" height="70" alt="logo">
+			</div>
+  		</a>';
+		}
+
+		// If logged in as clientt / dev / not logged in yet
+		else {
+
+			echo '<a class="navbar-brand" href="home.php">
 		 	<div class=main-logo>
     			<img src="img/devslounge-logo.png" width="250" height="70" alt="logo">
 			</div>
-  		</a>
+  		</a>';
 
+
+		}
+
+
+		?>
+
+	
 		<!-- Navbar Collapse -->
-       	<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<!--
+       	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
@@ -112,27 +136,26 @@
 						// If logged in as admin 
 						if(isset($_SESSION['type'])&& $_SESSION['type']=="admin") {
 
-							echo  '<li class="nav-item"><a class="nav-link" href="controlpanel.php">Control Panel</a></li>
-								<li class="nav-item"><a class="nav-link" href="jobpostings.php">Job Postings</a></li>
-								<li class="nav-item"><a class="nav-link" href="#">Log Out</a></li>'; //add a button for this instead. 
+							echo  '<li class="nav-item"><a class="nav-link" href="control-users.php">Control Panel</a></li>
+								<li class="nav-item"><a class="nav-link" href="control-jobpostings.php">Job Postings</a></li>
+								<li class="nav-item"><a class="nav-link" href="logout.php">Log Out</a></li>'; //add a button for this instead. 
 						}
 						
 						// If logged in as Developer or Client
 						else if(isset($_SESSION['type']) && ( $_SESSION['type']=="developer" || $_SESSION['type']=="client" )) {
 
 							echo  '<li class="nav-item"><a class="nav-link" href="jobpostings.php">Job Postings</a></li>
-									<li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-									<li class="nav-item"><a class="nav-link" href="#">About</a></li>
-									<li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
-								<li class="nav-item"><a class="nav-link" href="#">Log Out</a></li>'; //add a button for this instead. 
+									<li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
+									<li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
+								<li class="nav-item"><a class="nav-link" href="logout.php">Log Out</a></li>'; //add a button for this instead. 
 						}
 
 						// User is not logged in (default navbar upon entering home page)
 						else {
 
 							echo  '<li class="nav-item"><a class="nav-link" href="jobpostings.php">Job Postings</a></li>
-									<li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-									<li class="nav-item"><a class="nav-link" href="#">About</a></li>
+									<li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
+									<li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
 									<li class="nav-item"><a class="nav-link" href="login.php">Log In</a></li>
 									<li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>';
 						}
