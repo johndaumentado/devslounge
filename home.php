@@ -43,7 +43,7 @@
 			text-align:center;
 			background-color: #ffffff;
 			color:#4338bc;
-			padding-top:30px;
+			padding-top:80px;
 
 		}
 
@@ -64,9 +64,8 @@
 			font-family: 'Roboto', sans-serif;
 			color:#4e148c;
 			font-size:14pt;
-		
-		}
 
+		}
 		</style>
 
 	
@@ -83,8 +82,7 @@
 
 		<br />
 		<br />
-		<br />
-		<br />
+
 
 
 		<!--Home Contents-->
@@ -100,24 +98,37 @@
 						<!--Heading-->
 						<div class = "container-fluid">
 
-							<div class = "home-heading">
+							<div class = "row"> 
 
-								<div class = "row"> 
+								<div class = "home-heading">
+
 
 									Welcome to DevsLounge!
 
 								</div>
 							</div>
 
+					
+							<div class = "home-text">
+							
+								Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+							</div>    
+
 						</div>
 
-						<div class = "home-text">
+						<div class = "container-fluid">
 
-	
-						
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+							<div class = "row"> 
 
-						</div>                
+								<div class = "container-button">
+
+									<a href = "jobpostings.php" class = "button">Browse For Jobs</a>
+
+								</div>
+							</div>
+						</div>
+
 					</div>
 
 
