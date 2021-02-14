@@ -95,7 +95,7 @@
 
 			text-align:center;
 			font-family:'Quicksand', sans-serif;
-			font-size:14pt;
+			font-size:12pt;
 			color:#360568;
 
 		}
@@ -107,6 +107,7 @@
 			align-items: center;
 			font-family:'Roboto', sans-serif;
 			color:#7161ef;
+			font-size:10pt;
 		}
 
 		a:hover {
