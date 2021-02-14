@@ -147,7 +147,6 @@
 							echo  '<li class="nav-item"><a class="nav-link" href="jobpostings.php">Job Postings</a></li>
 									<li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
 									<li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
-									<li class="nav-item"><a class="nav-link" href="profile.php">Profile</a></li>
 								<li class="nav-item"><a class="nav-link" href="logout.php">Log Out</a></li>'; //add a button for this instead. 
 						}
 

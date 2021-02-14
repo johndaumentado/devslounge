@@ -38,29 +38,63 @@
 
 		<!-- Navbar -->
 
-		<?php include('user-navbar.php'); ?>
+		<?php include('navbar.php'); ?>
+
+		<br />
+		<br />
+		<br />
+		<br />
 
 
-		
-		<!-- Home Contents -->
-
-		<!-- Jumbotron Image -->
+		<!--Home Contents-->
 
 		<div class="container-fluid">
 
-			<img src="img/placeholderIMG.png" alt="Home Image" style="width:100%;">
+		<div class = "home-contents">
 
-			<div class="centered">
+			<div class="row">
 
-				<h1>Placeholder Text</h1> above Placeholder Image
+				<div class="col-lg-6">
 
+					<img src="img/home.png" width="500" height="500" alt="logo">
+				
+				</div>
+
+				<div class="col-lg-6">
+
+					<!--Heading-->
+					<div class = "container-fluid">
+
+						<div class = "home-heading">
+
+							<div class = "row"> 
+
+								Welcome to DevsLounge!
+
+							</div>
+						</div>
+
+					</div>
+
+					<div class = "home-text">
+
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					
+					<br />
+					<br />
+					
+					Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+					</div>                
+				</div>
+				
 			</div>
-
+		</div>
 
 		</div>
-		
-		<br/>
 
+		<br />
+		<br />
 
 		<!-- Featured Developers -->
 		
@@ -77,14 +111,13 @@
 					<div class="panel">
 
 						<div class=panel-heading>
-							<img src = "img/sample-dev.png" alt="Perez-dev" />
+
 							<b>Joshua Perez</b>
 							<br />
 							Software Developer 
 							<br />
 							Php300.00/hour 
 
-                        <img src="img/home.png" width="600" height="600" alt="logo">
                     
                     </div>
 
@@ -95,52 +128,6 @@
 					</div>
 				</div>
 
-				<!--Developer 2-->
-				<div class="col-sm">
-					<div class="panel">
-
-						<div class=panel-heading>
-							<img src = "img/sample-dev.png" alt="Perez-dev" />
-							<b>Joshua Perez</b>
-							<br />
-							Software Developer 
-							<br />
-							Php300.00/hour 
-
-						</div>
-
-						<div class=panel-body>
-							Insert Skills here
-						</div>
-
-					</div>
-				</div>
-
-				<!--Developer 1-->
-				<div class="col-sm">
-					<div class="panel">
-
-						<div class=panel-heading>
-							<img src = "img/sample-dev.png" alt="Perez-dev" />
-							<b>Joshua Perez</b>
-							<br />
-							Software Developer 
-							<br />
-							Php300.00/hour 
-
-						</div>
-
-						<div class=panel-body>
-							Insert Skills here
-						</div>
-
-					</div>
-				</div>
-
-				
-
-
-				
 
 			</div>
 		</div>
