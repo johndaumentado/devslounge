@@ -26,9 +26,6 @@
 
         <link href = "style/about.css" rel = "stylesheet" type = "text/css">
 
-
-
-
     </head>
 
 
