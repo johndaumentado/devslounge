@@ -14,29 +14,18 @@
 		/* Background of Login */
 		body {
 
-			background-color: #8a00e6;
+			background: linear-gradient(
+				to right bottom,
+				rgba(118, 102, 240, 1),
+				rgba(90, 24, 154, 1)
+			);
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			height: 100vh;
+	
+			}
 
-		}
-
-		/* Circles on Background */
-		.circle1,
-		.circle2 {
-			background: white;
-			background: linear-gradient(
-				to right bottom,
-				rgba(255, 255, 255, 0.7),
-				rgba(255, 255, 255, 0.3)
-			);
-			height: 20rem;
-			width: 20rem;
-			position: absolute;
-			border-radius: 50%;
-
-		}
 
 
 		/*Heading*/
@@ -125,6 +114,28 @@
 			text-decoration:none;
 			font-family:'Roboto', sans-serif;
 			color:#5b2a86;
+			transition:all .5s;
 		}
 
 
+
+		/*Background Design*/
+		
+		.circle1,
+		.circle2 {
+			background: white;
+			background: linear-gradient(
+				to right bottom,
+				rgba(255, 255, 255, 0.7),
+				rgba(255, 255, 255, 0.3)
+			);
+			height: 20rem;
+			width: 20rem;
+			position: absolute;
+			border-radius: 50%;
+
+		}
+
+
+		
+  

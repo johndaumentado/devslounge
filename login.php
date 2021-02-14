@@ -25,7 +25,27 @@
         <!--Styles-->
 
         <link href = "style/logindesign.css" rel = "stylesheet" type = "text/css">
-	
+
+		<style>
+
+		body {
+
+		background: linear-gradient(
+			to right bottom,
+			rgba(118, 102, 240, 1),
+			rgba(90, 24, 154, 1)
+		);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+
+		}
+
+		</style>
+		
+
+
     </head>
 
 	<body>
@@ -57,12 +77,11 @@
 				<br/>
 				<h4>
 					Don't Have An Account Yet?
-					<br /><a href="register.php">Click Here to Register!</a>
+					<br />
+					<a href="register.php">Click Here to Register!</a>
 				</h4>
 			</form>
 		</div>
-
-	
 
 	</body>
 
