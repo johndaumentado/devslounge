@@ -63,6 +63,18 @@
 
     
     /* Featured Developers */
+    h1 {
+
+        font-size: 24pt !important;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bolder;
+        text-align:center;
+        background-color: #ffffff;
+        color:#4338bc;
+        padding-bottom:30px;
+        
+    }
+
     .panel {
 
         border: 1px solid #98aae1;

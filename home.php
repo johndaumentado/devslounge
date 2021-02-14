@@ -147,8 +147,13 @@
 		<br />
 
 		<!-- Featured Developers -->
-		
-		<h1 align="center">Featured Developers</h1>
+
+		<!--Heading-->
+		<h1 style =" font-size: 24pt !important;font-family: 'Quicksand', sans-serif;font-weight: bolder;
+        text-align:center;background-color: #ffffff;
+        color:#4338bc; padding-bottom:30px;">
+		Featured Developers
+		</h1>
 		<br />
 
 
