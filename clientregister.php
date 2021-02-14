@@ -98,11 +98,9 @@ hr {
       <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 	  
       </p>
-
       <div class="clearfix">
         <button type="submit" class="signupbtn"><a href="login.php">Sign Up</button>
       </div>
-	  
     </div>
   </form>
 </div>
