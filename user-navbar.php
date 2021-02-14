@@ -1,11 +1,10 @@
 <!-- Navbar -->
 <?php
 
-    //session_start();
-    //$_SESSION['type'] = "admin";
+    session_start();
+    $_SESSION['type'] = "client";
 
 ?>
-
 <!DOCTYPE html>
 
 <html lang = "en">
@@ -121,9 +120,7 @@
 
 	
 		<!-- Navbar Collapse -->
-
-		<!-- TO FIX
-
+		<!--
        	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>

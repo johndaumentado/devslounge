@@ -2,43 +2,102 @@
 
 /* Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-
-/* Heading Image */
-.home-heading {
-
-    font-size: 24pt !important;
-	font-family: 'Quicksand', sans-serif;
-	font-weight: bolder;
-    text-align:center;
-    background-color: #ffffff;
-    color:#4338bc;
-    padding-top:30px;
-
-}
-
-.home-contents {
-
-    margin-top:10px;
-    padding:50px;
-}
-
-
-.home-text {
-
-    margin-top: 10px;
-    padding-top:30px;
-    padding-right:50px;
-    position:absolute;
-    text-align:justify;
-    font-family: 'Roboto', sans-serif;
-    color:#4e148c;
-    font-size:14pt;
-   
-}
 
 
 
+/* Container holding the image and the text */
+    .container-fluid {
+
+        position: relative;
+        text-align: center;
+        padding: 5px 10px;
+        margin-left:200px;
+        margin-right:200px;
+        
+    }
+    
+
+    /* Bottom left text */
+    .bottom-left { 
+
+        position: absolute;
+        bottom: 140px;
+        left: 40px;
+    }
+    
+    /* Top left text */
+    .top-left {
+
+        position: absolute;
+        top: 8px;
+        left: 16px;
+    }
+    
+    /* Top right text */
+    .top-right {
+
+        position: absolute;
+        top: 8px;
+        right: 16px;
+    }
+    
+    /* Bottom right text */
+    .bottom-right {
+
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+    }
+    
+    /* Centered text */
+    .centered {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    
+    /* Featured Developers */
+    .panel {
+
+        border: 1px solid #98aae1;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        font-family: 'Calibri', sans-serif;
+        width: 250px;
+        min-height: 250px;
+
+    }
+
+    .panel-heading {
+
+        padding-left:20px;
+        padding-bottom:30px;
+        font-size: 10pt;
+        line-height: 12pt;
+        background-color: #8367c7;
+        color: #ffff;
+
+
+    }
+
+    .panel-heading img {
+
+        width:30%;
+        margin-right:10px;
+        float:left;
+        border-radius: 100px;
+
+
+    }
+
+    b {
+
+        font-size:14pt;
+        letter-spacing: 1pt;
+    }
+    
+  
 
