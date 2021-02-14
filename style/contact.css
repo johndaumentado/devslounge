@@ -40,3 +40,63 @@
 
     text-align:left;
 }
+
+
+/*Forms*/
+input {
+
+    display: block;
+    border: 2px solid #ccc;
+    width: 95%;
+    padding: 10px;
+    margin-right: 10px auto;
+    border: 3px solid #b79ced;
+    border-radius:20px;
+    font-family:'Roboto', sans-serif;
+    }
+
+input:focus {
+
+    background-color: #ffff;
+    outline: none;
+    }
+
+
+textarea {
+
+    display: block;
+    border: 2px solid #ccc;
+    width: 95%;
+    padding: 10px;
+    margin-right: 10px auto;
+    border: 3px solid #b79ced;
+    border-radius:20px;
+    font-family:'Roboto', sans-serif;
+    }
+
+textarea:focus {
+
+    background-color: #ffff;
+    outline: none;
+    }
+
+/* Button Design */
+input[type=submit] {
+
+    color:#fff;
+    background-color: #957fef;
+    padding: 10px;
+    border-radius: 5px;
+    width:95%;
+    border: none;
+    border-radius:20px;
+    float:center;
+    font-family:'Roboto', sans-serif;
+    font-size:14pt;
+    }
+
+input[type=submit]:hover{
+    opacity: .8;
+    transition:all .5s;
+    }
+

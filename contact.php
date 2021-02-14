@@ -142,13 +142,11 @@
 
                                     <form method="post" name="contact_form">
                                         
-                                        First Name <input type = "text" name = "first_name">
+                                        First Name <input type = "text" name = "first_name">  <br />
+ 
+                                        Last Name <input type = "text" name = "last_name">  <br />
 
-                                        Last Name <input type = "text" name = "last_name">
-
-                                        Email Address <input type = "text" name = "email_add">
-
-                                        <br />
+                                        Email Address <input type = "text" name = "email_add">  <br />
 
                                         Message
                                         <br /> <textarea rows="5" name="message" cols="30"></textarea>
