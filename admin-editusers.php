@@ -208,6 +208,11 @@
     <body>
 
         <!--Top Nav-->
+        <?php include('navbar.php'); ?>
+
+        <br />
+
+
           
         <!-- header -->
 
