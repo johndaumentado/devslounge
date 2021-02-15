@@ -81,9 +81,8 @@
         .footer-about a:hover {
 
             text-decoration:none;
-            font-weight:bold;
             transition:all .5s;
-            color:#ffff;
+            color:#b298dc;
 
         }
 
