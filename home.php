@@ -121,80 +121,46 @@
 
 				<?php
 
-				//For adding contents to table
-				$dbServername = "localhost";
-				$dbUsername = "root";
-				$dbPassword = "";
-				$dbName = "devslounge";
-				$conn = mysqli_connect ($dbServername, $dbUsername, $dbPassword, $dbName) or die(mysqli_error()); // connect to server 
+					//For adding contents to table
+					$dbServername = "localhost";
+					$dbUsername = "root";
+					$dbPassword = "";
+					$dbName = "devslounge";
+					$conn = mysqli_connect ($dbServername, $dbUsername, $dbPassword, $dbName) or die(mysqli_error()); // connect to server 
 
+					$sql = "SELECT name,email FROM users WHERE type LIKE 'dev'";
+					$result = $conn->query($sql);
 
-					//Developer 1
+					// resut per dev
+					if ($result->num_rows > 0) {
+						while($row = $result->fetch_assoc()) {
 
-					echo '<div class="col-sm-4">
-						<div class="panel">
+							echo '<div class="col-sm-4">
+								<div class="panel">
 
-							<div class=panel-heading>';
+									<div class=panel-heading>';
 
-							$getDev1 = mysqli_fetch_assoc(mysqli_query($conn, "SELECT name,email FROM users WHERE type LIKE 'dev'"));
-							$name1 = $getDev1['name'];
-							$email1 = $getDev1['email'];
+										echo '<h2>' . $row['name'] . '</h2>'; 
+										echo  '<h4>' . $row['email'] . '</h4>';
 
+							
+									echo '</div>
 
-							echo '<h2>' . $name1 . '</h2>'; 
-							echo  '<h4>' . $email1 . '</h4>';
+									</div>
+							</div>';
 
-						
-			
-						echo '</div>
+						}
 
-						</div>
-					</div>';
+					} 
+					
+						else {
+								echo "0 results";
+							}
 
-					//Developer 2
-
-					echo '<div class="col-sm-4">
-						<div class="panel">
-
-							<div class=panel-heading>';
-
-							$getDev2 = mysqli_fetch_assoc(mysqli_query($conn, "SELECT name,email FROM users WHERE type LIKE 'dev'"));
-							$name2 = $getDev2['name'];
-							$email2 = $getDev2['email'];
-
-
-							echo '<h2>' . $name2 . '</h2>'; 
-							echo '<h4>' . $email2 . '</h4>';
+					
 
 						
-			
-						echo '</div>
 
-						</div>
-					</div>';
-
-					//Developer 3
-
-					echo '<div class="col-sm-4">
-						<div class="panel">
-
-							<div class=panel-heading>';
-
-							$getDev3 = mysqli_fetch_assoc(mysqli_query($conn, "SELECT name,email FROM users WHERE type LIKE 'dev'"));
-							$name3 = $getDev3['name'];
-							$email3 = $getDev3['email'];
-
-
-							echo '<h2>' . $name3 . '</h2>'; 
-							echo '<h4>' . $email3 . '</h4>';
-
-						
-			
-						echo '</div>
-
-						</div>
-					</div>';
-				
 				?>
 
 
