@@ -109,11 +109,11 @@
             while($row = mysqli_fetch_array($query))
             {
                 Print "<tr>";
-                Print '<td align="center">'. $row['user_id'] . "</td>";
-                Print '<td align="center">'. $row['name'] . "</td>";
-                Print '<td align="center">'. $row['email']. "</td>";
-                Print '<td align="center">'. $row['password']. "</td>";
-                Print '<td align="center">'. $row['type']. "</td>";
+                Print '<td align="center" style = "padding:10px;">'. $row['user_id'] . "</td>";
+                Print '<td align="center" style = "padding:10px;">'. $row['name'] . "</td>";
+                Print '<td align="center" style = "padding:10px;">'. $row['email']. "</td>";
+                Print '<td align="center" style = "padding:10px;">'. $row['password']. "</td>";
+                Print '<td align="center" style = "padding:10px;">'. $row['type']. "</td>";
 				print '<td align="center"><a href="admin-editusers.php?id='. $row['user_id'] . ')">Edit</a> </td>';
 				print '<td align="center"><a onclick="myFunction(' . $row['user_id'] . ')">Delete</a> </td>';
 

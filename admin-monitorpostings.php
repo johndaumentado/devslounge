@@ -88,14 +88,14 @@
         <br />
 
             <h2 align="center">Job Postings</h2>
+            <center>
             <table>
                 <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Post Time</th>
-                    <th>Edit Time</th>
-                    <th>Edit</th>
+                    <th>Job ID</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Skill ID</th>
                     <th>Delete</th>
                 </tr>
             
@@ -106,17 +106,16 @@
             $dbName = "devslounge";
             $conn = mysqli_connect ($dbServername, $dbUsername, $dbPassword, $dbName); //Connect to server
 
-            $query = mysqli_query($conn, "Select * from list"); // SQL Query
+            $query = mysqli_query($conn, "Select * from job_postings"); // SQL Query
             while($row = mysqli_fetch_array($query))
             {
                 Print "<tr>";
-                Print '<td align="center" style = "padding:10px;">'. $row['id'] . "</td>";
-                Print '<td align="center" style = "padding:10px;">'. $row['details'] . "</td>";
-                Print '<td align="center" style = "padding:10px;">'. $row['date_posted']. " - ". $row['time_posted']."</td>";
-                Print '<td align="center" style = "padding:10px;">'. $row['date_edited']. " - ". $row['time_edited']. "</td>";
-                Print '<td align="center" style = "padding:10px;"><a href="edit.php?id='. $row['id'] .'">edit</a> </td>';
-                Print '<td align="center" style = "padding:10px;"><a href="#" onclick="myFunction('.$row['id'].')">delete</a> </td>';
-                Print '<td align="center" style = "padding:10px;">'. $row['public']. "</td>";
+                Print '<td align="center" style = "padding:10px;">'. $row['job_id'] . "</td>";
+                Print '<td align="center" style = "padding:10px;">'. $row['title'] . "</td>";
+                Print '<td align="center" style = "padding:10px;">'. $row['description']."</td>";
+                Print '<td align="center" style = "padding:10px;">'. $row['status']."</td>";
+                Print '<td align="center" style = "padding:10px;">'. $row['skill_id']."</td>";
+                Print '<td align="center" style = "padding:10px;"><a onclick="myFunction('.$row['job_id'].')">delete</a> </td>';
                 Print "</tr>";
             }
         ?>
@@ -125,16 +124,14 @@
         
         <!--For Deleting Record-->
         <script>
-            function myFunction(id)
+            function myFunction(job_id)
             {
-                var r=confirm("Are you sure you want to delete this record?");
+                var r=confirm("Are you sure you want to delete/edit this record?");
                 if (r==true)
                 {
-                    window.location.assign("delete.php?id=" + id);
+                    window.location.assign("deletejobadmin.php?job_id=" + job_id);
                 }
             }
         </script>
-
-
     </body>
 </html>
