@@ -20,10 +20,7 @@ $deleteClient = "DELETE FROM client WHERE client_id='$clientID'";
 mysqli_query($con, $deletePosts);
 mysqli_query($con, $deleteClient);
 mysqli_query($con, "DELETE FROM users WHERE user_id='$user_id'");
-<<<<<<< HEAD
 echo $clientID;
-
-=======
 } else if($type=="dev"){
 $getDevID = "SELECT dev_id FROM dev d JOIN users u on d.user_id=u.user_id WHERE d.user_id= '$user_id'";
 $results = mysqli_query($con, $getDevID);
@@ -41,6 +38,5 @@ mysqli_query($con, "DELETE FROM users WHERE user_id='$user_id'");
 Print '<script>window.location.assign("admin-monitorusers.php");</script>';
 echo $devID;
 echo $type;
->>>>>>> 641cce771c1064c315f96ce71ca2c0f57d743ec8
 }
 ?>

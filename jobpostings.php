@@ -278,7 +278,7 @@
                                             Print '<td align="center">'. $row['client_id'] . "</td>";        //For getting the client's id from the database
                                             Print '<td align="center">'. $row['status'] . "</td>";           //For getting the status of the job from the database
                                             Print '<td align="center">'. $row['dev_id'] . "</td>";           //For getting the developer's id
-                                            Print '<td align="center"><a href="jobprogress.php"?id='. $row['job_id'] .'">Apply</a> </td>';         //Dev can apply
+                                            Print '<td align="center"><a onclick="myFunction('. $row['job_id'] .')">Apply</a> </td>';         //Dev can apply
 
 
                                             //    Print '<td align="center">'. $row['date_edited']. " - ". $row['time_edited']. "</td>";
@@ -304,8 +304,17 @@
             ?>
         
         </div>
-
         <?php include('footer.php'); ?>
 
+        <script>
+            function myFunction(job_id)
+            {
+                var r=confirm("Are you sure you want to delete/edit this record?");
+                if (r==true)
+                {
+                    window.location.assign("deleteJob.php?job_id=" + job_id);
+                }
+            }
+        </script>
     </body>
 </html>
