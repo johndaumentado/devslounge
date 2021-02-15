@@ -280,7 +280,7 @@
                                             Print '<td align="center" style = "padding:10px;">'. $row['skill_id'] . "</td>";         //For getting the preferred skill of the developer from the database
                                             Print '<td align="center" style = "padding:10px;">'. $row['client_id'] . "</td>";        //For getting the client's id from the database
                                             Print '<td align="center" style = "padding:10px;">'. $row['status'] . "</td>";           //For getting the status of the job from the database
-                                            Print '<td align="center" style = "padding:10px;"><a onclick="myFunction('. $row['job_id'] .')">Apply</a> </td>';         //Dev can apply
+                                            Print '<td align="center" style = "padding:20px;"><a style = "background-color:#724cf9;margin:10px;padding:10px;border-radius:10px;color:#ffff;font-family:Roboto;" onclick="myFunction('. $row['job_id'] . ')">Apply</a> </td>';         //Dev can apply
 
 
                                             //    Print '<td align="center">'. $row['date_edited']. " - ". $row['time_edited']. "</td>";
