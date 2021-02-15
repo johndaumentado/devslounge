@@ -293,11 +293,11 @@
 
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
-		$con = mysqli_connect("localhost", "root", "", "devslounge") or die(mysqli_error()); //Connect to server
+		include_once 'includes/dbconnect.php' or die(mysqli_error()); //connnect to server
             $name = ($_POST['name']);
             $id = $_SESSION['user_id'];
 
-            mysqli_query($conn, "UPDATE users SET name='$name' WHERE user_id='$id'");
+            mysqli_query($connn, "UPDATE users SET name='$name' WHERE user_id='$id'");
             header("location: admin-monitorusers.php");
     }
 ?>
