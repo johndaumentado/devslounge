@@ -30,15 +30,8 @@
             if($password == $table_password)
             {
                 $_SESSION['email'] = $email; //set the username in a session. This serves as a global variable
-
-                if(isset($_SESSION['type']) && ( $_SESSION['type']=="dev" || $_SESSION['type']=="client")) {
-                    header("location: home.php"); // redirects the user to the authenticated homepage
-                }
-
-                else {
-                    header("location: admin-controlpanel.php"); // redirects the user to the control panel
-                }
-                
+                header("location: home.php"); // redirects the user to the authenticated homepage
+               
             }
             else
             {
