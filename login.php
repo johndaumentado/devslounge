@@ -63,7 +63,7 @@
 			
 				<p>
 					<label>Email</label>
-					<input type="text" id="user" name="user"  placeholder="Enter your Email" />
+					<input type="text" id="email" name="email"  placeholder="Enter your Email" />
 				</p>
 				<p>
 					<label>Password</label>

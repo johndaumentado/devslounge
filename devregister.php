@@ -85,7 +85,7 @@ hr {
       <input type="text" placeholder="Enter Name" name="name" required>
 	  
 	  <p style="color:White"><label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" required>
+      <input type="text" placeholder="Enter Email" name="email" id="email" required>
 		
       <label for="password"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="password" required>

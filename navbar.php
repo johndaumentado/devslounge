@@ -1,8 +1,15 @@
 <!-- Navbar -->
 <?php
-
     session_start();
-    $_SESSION['type'] = "client";
+    if(isset($_SESSION)){
+    include_once 'includes/dbconnect.php';
+    $string = mysqli_real_escape_string($conn,$_POST['email']);
+    $query = "SELECT type FROM users WHERE email='$string'";
+    $result = mysqli_query($conn, $query);
+    $value = $result->fetch_array();
+
+    $_SESSION['type'] = $value;
+    }
 
 ?>
 <!DOCTYPE html>
@@ -142,7 +149,7 @@
 						}
 						
 						// If logged in as Developer or Client
-						else if(isset($_SESSION['type']) && ( $_SESSION['type']=="developer" || $_SESSION['type']=="client" )) {
+						else if(isset($_SESSION['type']) && ( $_SESSION['type']=="dev" || $_SESSION['type']=="client" )) {
 
 							echo  '<li class="nav-item"><a class="nav-link" href="jobpostings.php">Job Postings</a></li>
 									<li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
@@ -165,8 +172,9 @@
 			</div>
         </nav>
 
-	
-
+<p>	
+    <?php echo $_SESSION['type']; ?>
+</p>
     </body>
 </html>
   
