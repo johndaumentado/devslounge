@@ -302,7 +302,7 @@
             $name = ($_POST['name']);
             $id = $_SESSION['user_id'];
 
-            mysqli_query($connn, "UPDATE users SET name='$name' WHERE user_id='$id'");
+            mysqli_query($conn, "UPDATE users SET name='$name' WHERE user_id='$id'");
             header("location: admin-monitorusers.php");
     }
 ?>

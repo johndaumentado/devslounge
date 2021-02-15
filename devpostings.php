@@ -165,8 +165,8 @@
     </tr>
 
  <?php
-    $con = mysqli_connect("localhost", "root", "", "devslounge") or die(mysqli_error()); //Connect to server
-    $query = mysqli_query($con, "Select * from dev_skills"); // SQL Query
+    $conn = mysqli_connect("localhost", "root", "", "devslounge") or die(mysqli_error()); //Connect to server
+    $query = mysqli_query($conn, "Select * from dev_skills"); // SQL Query
     while($row = mysqli_fetch_array($query))
     {
     Print "<tr>";
