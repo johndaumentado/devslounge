@@ -80,16 +80,16 @@
     <!-- Navbar -->
 
 		<?php include('navbar.php'); ?>
-
+            <br>
             <h2 align="center">Users</h2>
             <table>
             <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Password</th>
-            <th>Type</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th style="text-align: center;">Name</th>
+            <th style="text-align: center;">Email</th>
+            <th style="text-align: center;">Password</th>
+            <th style="text-align: center;">Type</th>
+            <th style="text-align: center;">Edit</th>
+            <th style="text-align: center;">Delete</th>
             </tr>
             
         <?php
@@ -104,7 +104,6 @@
             {
                 Print "<tr>";
 
-                Print '<td align="center">'. $row['user_id'] . "</td>";
                 Print '<td align="center">'. $row['name'] . "</td>";
                 Print '<td align="center">'. $row['email']. "</td>";
                 Print '<td align="center">'. $row['password']. "</td>";
