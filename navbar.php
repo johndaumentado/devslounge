@@ -1,16 +1,21 @@
 <!-- Navbar -->
 <?php
+    //session_start();
+    //if(isset($_SESSION)){
+    //include_once 'includes/dbconnect.php';
+    //$string = mysqli_real_escape_string($conn,$_POST['email']);
+    //$result = mysqli_query($conn, $query);
+    //$value = $result->fetch_array();
+
+    //$_SESSION['type'] = $value;
+   // }
     session_start();
-    if(isset($_SESSION)){
     include_once 'includes/dbconnect.php';
-    $string = mysqli_real_escape_string($conn,$_POST['email']);
-    $query = "SELECT type FROM users WHERE email='$string'";
+    $email = $_SESSION['email'];
+    $query = "SELECT type FROM users WHERE email='$email' LIMIT 1";
     $result = mysqli_query($conn, $query);
-    $value = $result->fetch_array();
-
-    $_SESSION['type'] = $value;
-    }
-
+    $value = $result->fetch_row();
+    $_SESSION['type'] = $value[0];
 ?>
 <!DOCTYPE html>
 
@@ -171,10 +176,6 @@
 				</ul>
 			</div>
         </nav>
-
-<p>	
-    <?php echo $_SESSION['type']; ?>
-</p>
     </body>
 </html>
   
