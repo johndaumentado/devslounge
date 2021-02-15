@@ -117,7 +117,6 @@
 
 
                         echo '<div class=row>
-
                     
                 
                             <div class="table">
@@ -130,11 +129,9 @@
                                         <th>Title</th>
                                         <th>Description</th>
                                         <th>Preferred Skill</th>
-                                        <th>Client Name</th>
+                                        <th>Client ID</th>
                                         <th>Status</th>
-                                        <th>Developer Complete</th>
                                     </tr>';
-
 
 
                                         //For adding contents to table
@@ -202,7 +199,7 @@
                                     <p>Preferred Skill: </p><select name="skill_id" id="skill_id" value="skill_id" style="font-family: Josefin Sans; font-size: 20px;" >
                                                             <option value="HTML/CSS" style="font-family: Josefin Sans; font-size: 20px;">HTML / CSS</option>
                                                             <option value="C++" style="font-family: Josefin Sans; font-size: 20px;">C++</option>
-                                                            <option value="Python" style="font-family: Josefin Sans; font-size: 20px;">Python/option>
+                                                            <option value="Python" style="font-family: Josefin Sans; font-size: 20px;">Python</option>
                                                             <option value="Java" style="font-family: Josefin Sans; font-size: 20px;">Java</option>
                                                             <option value="C#" style="font-family: Josefin Sans; font-size: 20px;">C#</option>
                                                         </select>
@@ -219,7 +216,7 @@
 
 
                     // DEVELOPER
-                    if(isset($_SESSION['type']) && $_SESSION['type']=="developer") {
+                    if(isset($_SESSION['type']) && $_SESSION['type']=="dev") {
 
 
                         echo '<div class=row>
@@ -237,6 +234,7 @@
                                         <th>Client Name</th>
                                         <th>Status</th>
                                         <th>Developer Complete</th>
+                                        <th>Edit</th>
                                     </tr>';
 
 
@@ -280,9 +278,7 @@
                                             Print '<td align="center">'. $row['client_id'] . "</td>";        //For getting the client's id from the database
                                             Print '<td align="center">'. $row['status'] . "</td>";           //For getting the status of the job from the database
                                             Print '<td align="center">'. $row['dev_id'] . "</td>";           //For getting the developer's id
-                                            
-                                            
-
+                                            Print '<td align="center"><a href="jobprogress.php"?id='. $row['job_id'] .'">Apply</a> </td>';         //Dev can apply
 
 
                                             //    Print '<td align="center">'. $row['date_edited']. " - ". $row['time_edited']. "</td>";
@@ -305,16 +301,9 @@
             echo $_SESSION['clientID'];
             echo $_SESSION['type'];
 
-
-
-
-
             ?>
         
         </div>
-
-
-       
 
         <?php include('footer.php'); ?>
 
