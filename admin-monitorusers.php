@@ -1,9 +1,9 @@
 <!-- Control Panel -->
 
 <?php 
-
-            session_start(); //starts the session   
-            include_once 'includes/dbconnect.php';
+        error_reporting(0);
+        session_start(); //starts the session   
+        include_once 'includes/dbconnect.php';
 		$email = $_SESSION['email'];
 		$query = "SELECT type FROM users WHERE email='$email' LIMIT 1";
 		$result = mysqli_query($conn, $query);
