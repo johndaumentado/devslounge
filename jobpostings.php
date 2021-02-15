@@ -77,7 +77,7 @@
 
                             <div class = "job-text">
 
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                               Hello developers and clients! Create and grab your jobs here! View the list below.
 
                             </div>
 
@@ -121,16 +121,16 @@
                 
                             <div class="table">
                         
-                                <table>
+                                <table style = "font-size:14pt;background-color: #FFFFFF; width:100%; margin:auto; border: 3px solid #9d4edd;">
                 
                                     <!--Table Heading-->
-                                    <tr>
-                                        <th>Job Posting ID Number</th>
-                                        <th>Title</th>
-                                        <th>Description</th>
-                                        <th>Preferred Skill</th>
-                                        <th>Client ID</th>
-                                        <th>Status</th>
+                                    <tr style>
+                                        <th style = "text-align:center;padding:10px"">Job Posting ID Number</th>
+                                        <th style = "text-align:center;padding:10px"">Title</th>
+                                        <th style = "text-align:center;padding:10px"">Description</th>
+                                        <th style = "text-align:center;padding:10px"">Preferred Skill</th>
+                                        <th style = "text-align:center;padding:10px"">Client ID</th>
+                                        <th style = "text-align:center;padding:10px"">Status</th>
                                     </tr>';
 
 
@@ -167,13 +167,13 @@
                                         while($row = mysqli_fetch_array($query)) {
 
                                             Print "<tr>";
-                                            Print '<td align="center">'. $row['job_id'] . "</td>";           //For getting the job ID from the database
-                                            Print '<td align="center">'. $row['title'] . "</td>";            //For getting the job title from the database
-                                            Print '<td align="center">'. $row['description'] . "</td>";      //For getting the job description from the database
-                                            Print '<td align="center">'. $row['skill_id'] . "</td>";         //For getting the preferred skill of the developer from the database
-                                            Print '<td align="center">'. $row['client_id'] . "</td>";        //For getting the client's id from the database
-                                            Print '<td align="center">'. $row['status'] . "</td>";           //For getting the status of the job from the database
-                                            Print '<td align="center">'. $row['dev_id'] . "</td>";           //For getting the developer's id
+                                            Print '<td align="center" style = "padding:10px;">'. $row['job_id'] . "</td>";           //For getting the job ID from the database
+                                            Print '<td align="center" style = "padding:10px;">'. $row['title'] . "</td>";            //For getting the job title from the database
+                                            Print '<td align="center" style = "padding:10px;">'. $row['description'] . "</td>";      //For getting the job description from the database
+                                            Print '<td align="center" style = "padding:10px;">'. $row['skill_id'] . "</td>";         //For getting the preferred skill of the developer from the database
+                                            Print '<td align="center" style = "padding:10px;">'. $row['client_id'] . "</td>";        //For getting the client's id from the database
+                                            Print '<td align="center" style = "padding:10px;">'. $row['status'] . "</td>";           //For getting the status of the job from the database
+                                            Print '<td align="center" style = "padding:10px;">'. $row['dev_id'] . "</td>";           //For getting the developer's id
 
                                             //    Print '<td align="center">'. $row['date_edited']. " - ". $row['time_edited']. "</td>";
                                             //    Print '<td align="center"><a href="#" onclick="myFunction('.$row['id'].')">delete</a> </td>';
@@ -192,20 +192,31 @@
                                     <br/>
                                     <br/>
 
-                                    Add a job posting: <br/>
+                                    <p style = "font-family:Quicksand;font-size:18pt;font-weight:bold;">Add a Job: <br/>
 
-                                    Job Title: <input type="text" name="title"/><br/>
-                                    Description: <input type="text" name="description"/><br/>
-                                    <p>Preferred Skill: </p><select name="skill_id" id="skill_id" value="skill_id" style="font-family: Josefin Sans; font-size: 20px;" >
+                                    <p style = "font-family:Quicksand;font-size:14pt;">Job Title: <input type="text" name="title"/><br/>
+                                    Description: <input type="text" name="description"/><br/></p>
+                                    <center> <p style = "font-family:Quicksand;font-size:14pt;">Preferred Skill: </p><select name="skill_id" id="skill_id" value="skill_id" style="font-family:Roboto,sans-serif;font-size: 20px;padding:10px;" >
                                                             <option value="HTML/CSS" style="font-family: Josefin Sans; font-size: 20px;">HTML / CSS</option>
                                                             <option value="C++" style="font-family: Josefin Sans; font-size: 20px;">C++</option>
                                                             <option value="Python" style="font-family: Josefin Sans; font-size: 20px;">Python</option>
                                                             <option value="Java" style="font-family: Josefin Sans; font-size: 20px;">Java</option>
                                                             <option value="C#" style="font-family: Josefin Sans; font-size: 20px;">C#</option>
                                                         </select>
-                                                        
-                                    <input type="submit" value="Add to list"/>
-
+                                                        <br />
+                                                        <br />
+                                    <input type="submit" value="Add to list" style = "color:#fff;
+                                    background-color: #8a00e6;
+                                    padding: 10px;
+                                    border-radius: 5px;
+                                    width:30%;
+                                    border: none;
+                                    border-radius:20px;
+                                    float:center;
+                                    font-family:Roboto, sans-serif;
+                                    font-size:14pt;"
+                                    />
+                                    </center>
                                 </form>';
                             echo '</div>';
                         echo '</div>';
@@ -223,18 +234,17 @@
                 
                             <div class="table">
                         
-                                <table>
+                                <table style = "font-size:14pt;background-color: #FFFFFF; width:100%; margin:auto; border: 3px solid #9d4edd;">
                 
                                     <!--Table Heading-->
                                     <tr>
-                                        <th>Job Posting ID Number</th>
-                                        <th>Title</th>
-                                        <th>Description</th>
-                                        <th>Preferred Skill</th>
-                                        <th>Client Name</th>
-                                        <th>Status</th>
-                                        <th>Developer Complete</th>
-                                        <th>Edit</th>
+                                        <th style = "text-align:center;padding:10px">Job Posting ID Number</th>
+                                        <th style = "text-align:center;padding:10px"">Title</th>
+                                        <th style = "text-align:center;padding:10px"">Description</th>
+                                        <th style = "text-align:center;padding:10px"">Preferred Skill</th>
+                                        <th style = "text-align:center;padding:10px"">Client Name</th>
+                                        <th style = "text-align:center;padding:10px"">Status</th>
+                                        <th style = "text-align:center;padding:10px"">Apply</th>
                                     </tr>';
 
 
@@ -271,14 +281,13 @@
                                         while($row = mysqli_fetch_array($query)) {
 
                                             Print "<tr>";
-                                            Print '<td align="center">'. $row['job_id'] . "</td>";           //For getting the job ID from the database
-                                            Print '<td align="center">'. $row['title'] . "</td>";            //For getting the job title from the database
-                                            Print '<td align="center">'. $row['description'] . "</td>";      //For getting the job description from the database
-                                            Print '<td align="center">'. $row['skill_id'] . "</td>";         //For getting the preferred skill of the developer from the database
-                                            Print '<td align="center">'. $row['client_id'] . "</td>";        //For getting the client's id from the database
-                                            Print '<td align="center">'. $row['status'] . "</td>";           //For getting the status of the job from the database
-                                            Print '<td align="center">'. $row['dev_id'] . "</td>";           //For getting the developer's id
-                                            Print '<td align="center"><a onclick="myFunction('. $row['job_id'] .')">Apply</a> </td>';         //Dev can apply
+                                            Print '<td align="center" style = "padding:10px;">'. $row['job_id'] . "</td>";           //For getting the job ID from the database
+                                            Print '<td align="center" style = "padding:10px;">'. $row['title'] . "</td>";            //For getting the job title from the database
+                                            Print '<td align="center" style = "padding:10px;">'. $row['description'] . "</td>";      //For getting the job description from the database
+                                            Print '<td align="center" style = "padding:10px;">'. $row['skill_id'] . "</td>";         //For getting the preferred skill of the developer from the database
+                                            Print '<td align="center" style = "padding:10px;">'. $row['client_id'] . "</td>";        //For getting the client's id from the database
+                                            Print '<td align="center" style = "padding:10px;">'. $row['status'] . "</td>";           //For getting the status of the job from the database
+                                            Print '<td align="center" style = "padding:10px;"><a onclick="myFunction('. $row['job_id'] .')">Apply</a> </td>';         //Dev can apply
 
 
                                             //    Print '<td align="center">'. $row['date_edited']. " - ". $row['time_edited']. "</td>";
