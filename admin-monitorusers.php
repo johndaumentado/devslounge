@@ -104,13 +104,14 @@
             {
                 Print "<tr>";
 
+                Print '<td align="center">'. $row['user_id'] . "</td>";
                 Print '<td align="center">'. $row['name'] . "</td>";
                 Print '<td align="center">'. $row['email']. "</td>";
                 Print '<td align="center">'. $row['password']. "</td>";
                 Print '<td align="center">'. $row['type']. "</td>";
 				print '<td align="center"><a href="edit.php" onclick="myFunction(' . $row['user_id'] . ')">Edit</a> </td>';
-				print '<td align="center"><a href="delete.php" onclick="myFunction(' . $row['user_id'] . ')">Delete</a> </td>';
-             
+				print '<td align="center"><a onclick="myFunction(' . $row['user_id'] . ')">Delete</a> </td>';
+
                 Print "</tr>";
             }
         ?>
@@ -119,12 +120,12 @@
         
         <!--For Deleting Record-->
         <script>
-            function myFunction(id)
+            function myFunction(user_id)
             {
                 var r=confirm("Are you sure you want to delete/edit this record?");
                 if (r==true)
                 {
-                    window.location.assign("delete.php?id=" + id);
+                    window.location.assign("delete.php?user_id=" + user_id);
                 }
             }
         </script>
