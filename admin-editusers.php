@@ -244,7 +244,7 @@
             $_SESSION['user_id'] = $id;
             $id_exists = true;
 
-            include_once 'includes/dbconnect.php' or die(mysqli_error()); //Connect to server
+            include_once 'includes/dbconnect.php'; //Connect to server
             $sql = "SELECT * from users WHERE user_id='$id'";
             $query = mysqli_query($conn, $sql); // SQL Query
             $count = mysqli_num_rows($query);
@@ -298,7 +298,7 @@
 
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
-		include_once 'includes/dbconnect.php' or die(mysqli_error()); //connnect to server
+		include_once 'includes/dbconnect.php'; //connnect to server
             $name = ($_POST['name']);
             $id = $_SESSION['user_id'];
 
