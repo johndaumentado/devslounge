@@ -3,10 +3,10 @@
 session_start(); //starts the session
 if($_SERVER['REQUEST_METHOD'] == "GET")
 {
-$con = mysqli_connect("localhost", "root", "", "devslounge") or die(mysqli_error()); //Connect to server
+include_once('includes/dbconnect.php');
 $jobID = $_GET['job_id'];
 $deletePosts = "DELETE FROM job_postings WHERE job_id='$jobID'";
-mysqli_query($con, $deletePosts);
+mysqli_query($conn, $deletePosts);
 Print '<script>window.location.assign("jobpostings.php");</script>';
 echo $devID;
 echo $type;
