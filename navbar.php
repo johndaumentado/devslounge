@@ -1,14 +1,5 @@
 <!-- Navbar -->
 <?php
-    //session_start();
-    //if(isset($_SESSION)){
-    //include_once 'includes/dbconnect.php';
-    //$string = mysqli_real_escape_string($conn,$_POST['email']);
-    //$result = mysqli_query($conn, $query);
-    //$value = $result->fetch_array();
-
-    //$_SESSION['type'] = $value;
-   // }
     session_start();
     include_once 'includes/dbconnect.php';
     $email = $_SESSION['email'];
