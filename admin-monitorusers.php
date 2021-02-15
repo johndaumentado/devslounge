@@ -2,15 +2,12 @@
 
 <?php 
 
-    //session_start(); // starts the session
-
-    /*if($_SESSION['admin']){ //checks if user is logged in
+    session_start(); // starts the session
+    if($_SESSION['type']=="admin"){ //checks if user is logged in
     }
     else{
     header("location:login.php"); // redirects if user is not logged in
     }
-    $user = $_SESSION['user']; //assigns user value ??
-    */
 ?>
 
 <!DOCTYPE html>
@@ -84,6 +81,7 @@
             <h2 align="center">Users</h2>
             <table>
             <tr>
+			<th>ID</th>
             <th>Name</th>
             <th>Email</th>
             <th>Password</th>
