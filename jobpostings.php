@@ -148,12 +148,14 @@
                                         {
                                             $title = ($_POST['title']);
                                             $description = ($_POST['description']);
-
                                             $status ="Hiring";    //For the status
                                             $skill_id =($_POST['skill_id']);    //For the skills
-                                            $con = mysqli_connect("localhost", "root", "", "devslounge") or die(mysqli_error()); //Connect to server
-                                            
-                                            mysqli_query($con, "INSERT INTO job_postings (title, description, status, skill_id) VALUES  ('$title','$description','$status', '$skill_id')"); //SQL query
+                                            $email = $_SESSION['email'];
+                                            $getClientID = "SELECT client_id FROM client c JOIN users u on c.user_id=u.user_id WHERE u.email = '$email'"; 
+                                            $result = mysqli_query($conn, $getClientID);
+                                            $clientID = $result->fetch_row();
+                                            $_SESSION['clientID'] = $clientID[0];
+                                            mysqli_query($conn, "INSERT INTO job_postings (title, description,client_id, status, skill_id) SELECT '$title','$description','$clientID[0]','$status', skills.skill_id FROM skills WHERE skills.name = '$skill_id'"); //SQL query
                                         }
                                         //  else
                                         // {
@@ -163,7 +165,7 @@
                                         
                                         // For displaying contents to table
                                         $conn = mysqli_connect ($dbServername, $dbUsername, $dbPassword, $dbName) or die(mysqli_error()); //Connect to server db name:[devslounge]
-                                        $query = mysqli_query($con, "Select * from job_postings"); // SQL Query
+                                        $query = mysqli_query($conn, "Select * from job_postings"); // SQL Query
                     
                                         while($row = mysqli_fetch_array($query)) {
 
@@ -198,9 +200,9 @@
                                     Job Title: <input type="text" name="title"/><br/>
                                     Description: <input type="text" name="description"/><br/>
                                     <p>Preferred Skill: </p><select name="skill_id" id="skill_id" value="skill_id" style="font-family: Josefin Sans; font-size: 20px;" >
-                                                            <option value="HTML" style="font-family: Josefin Sans; font-size: 20px;">HTML / CSS</option>
+                                                            <option value="HTML/CSS" style="font-family: Josefin Sans; font-size: 20px;">HTML / CSS</option>
                                                             <option value="C++" style="font-family: Josefin Sans; font-size: 20px;">C++</option>
-                                                            <option value="Phython" style="font-family: Josefin Sans; font-size: 20px;">Phython/option>
+                                                            <option value="Python" style="font-family: Josefin Sans; font-size: 20px;">Python/option>
                                                             <option value="Java" style="font-family: Josefin Sans; font-size: 20px;">Java</option>
                                                             <option value="C#" style="font-family: Josefin Sans; font-size: 20px;">C#</option>
                                                         </select>
@@ -250,12 +252,14 @@
                                         {
                                             $title = ($_POST['title']);
                                             $description = ($_POST['description']);
-
                                             $status ="Hiring";    //For the status
                                             $skill_id =($_POST['skill_id']);    //For the skills
-                                            $con = mysqli_connect("localhost", "root", "", "devslounge") or die(mysqli_error()); //Connect to server
-                                            
-                                            mysqli_query($con, "INSERT INTO job_postings (title, description, status, skill_id) VALUES  ('$title','$description','$status', '$skill_id')"); //SQL query
+                                            $email = $_SESSION['email'];
+                                            $getClientID = "SELECT client_id FROM client c JOIN users u on c.user_id=u.user_id WHERE u.email = '$email'"; 
+                                            $result = mysqli_query($conn, $getClientID);
+                                            $clientID = $result->fetch_row();
+                                            $_SESSION['clientID'] = $clientID[0];
+                                            mysqli_query($conn, "INSERT INTO job_postings (title, description,client_id, status, skill_id) SELECT '$title','$description','$clientID[0]','$status', skills.skill_id FROM skills WHERE skills.name = '$skill_id'"); //SQL query
                                         }
                                         //  else
                                         // {
@@ -264,8 +268,7 @@
 
                                         
                                         // For displaying contents to table
-                                        $conn = mysqli_connect ($dbServername, $dbUsername, $dbPassword, $dbName) or die(mysqli_error()); //Connect to server db name:[devslounge]
-                                        $query = mysqli_query($con, "Select * from job_postings"); // SQL Query
+                                        $query = mysqli_query($conn, "Select * from job_postings"); // SQL Query
                     
                                         while($row = mysqli_fetch_array($query)) {
 
@@ -298,7 +301,9 @@
 
                     }
 
-
+            echo $_SESSION['email'];
+            echo $_SESSION['clientID'];
+            echo $_SESSION['type'];
 
 
 
