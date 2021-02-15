@@ -81,9 +81,8 @@
         .footer-about a:hover {
 
             text-decoration:none;
-            font-weight:bold;
             transition:all .5s;
-            color:#ffff;
+            color:#b298dc;
 
         }
 
@@ -119,9 +118,9 @@
                     <div class="col-sm-4 col-md-4 col-lg-4">
 
                             <ul class="list-unstyled quick-links">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Job Postings</a></li>
-                                <li><a href="#">Developers</a></li>
+                                <li><a href="home.php">Home</a></li>
+                                <li><a href="jobpostings.php">Job Postings</a></li>
+
     
                             </ul>
 
@@ -130,8 +129,8 @@
                     <div class="col-sm-4 col-md-4 col-lg-4">
    
                             <ul class="list-unstyled quick-links">
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">About</a></li>
+                                <li><a href="contact.php">Contact Us</a></li>
+                                <li><a href="about.php">About</a></li>
 
                             </ul>
 
