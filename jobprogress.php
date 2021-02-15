@@ -132,12 +132,16 @@
                                     $dbName = "devslounge";
                                     $conn = mysqli_connect ($dbServername, $dbUsername, $dbPassword, $dbName) or die(mysqli_error()); //connect to server 
 
-                                    $id = $_GET['job_id'];
-
                                     //$_SESSION['id'] = $id; //type of login
                                     $id_exists = true;
 
-                                    $sql = "SELECT * from job_postings Where job_id='$id'"; // select from jobpostings table
+                                    $sql = "SELECT * from job_postings WHERE job_id='$job_id'"; // select from jobpostings table
+
+                                    //$clientID = $result->fetch_row();
+
+                                    //$job_id = $_GET['job_id'];
+                                    //$job_id = $clientResults[0];
+
                                     $query = mysqli_query($conn, $sql); // SQL Query
                                     $count = mysqli_num_rows($query);
 
@@ -147,7 +151,7 @@
                                         {
                                             Print "<tr>";
                                             Print '<td style = "text-align:center; padding:10px">'. $row['title'] . "</td>";
-                                            Print '<td style = "text-align:center; padding:10px">'. $row['description']. " - ". $row['time_posted']."</td>";
+                                            Print '<td style = "text-align:center; padding:10px">'. $row['description']. "</td>";
                                             Print '<td style = "text-align:center; padding:10px">'. $row['client_id']. "</td>";
                                             Print "</tr></table><br/>";
                                         }
