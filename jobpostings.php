@@ -141,7 +141,7 @@
                                         $dbName = "devslounge";
                                         $conn = mysqli_connect ($dbServername, $dbUsername, $dbPassword, $dbName) or die(mysqli_error()); // connect to server 
 
-                                        if($_SERVER['REQUEST_METHOD'] = "POST") //Added an if to keep the page secured
+                                        if($_SERVER['REQUEST_METHOD']== "POST") //Added an if to keep the page secured
                                         {
                                             $title = ($_POST['title']);
                                             $description = ($_POST['description']);
@@ -246,7 +246,7 @@
                                         $dbName = "devslounge";
                                         $conn = mysqli_connect ($dbServername, $dbUsername, $dbPassword, $dbName) or die(mysqli_error()); // connect to server 
 
-                                        if($_SERVER['REQUEST_METHOD'] = "POST") //Added an if to keep the page secured
+                                        if($_SERVER['REQUEST_METHOD'] == "POST") //Added an if to keep the page secured
                                         {
                                             $title = ($_POST['title']);
                                             $description = ($_POST['description']);
@@ -296,11 +296,6 @@
                         echo '</div>';
 
                     }
-
-            echo $_SESSION['email'];
-            echo $_SESSION['clientID'];
-            echo $_SESSION['type'];
-
             ?>
         
         </div>
