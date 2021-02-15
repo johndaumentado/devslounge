@@ -3,6 +3,12 @@
 <?php 
 
     session_start(); // starts the session
+    include_once 'includes/dbconnect.php';
+    $email = $_SESSION['email'];
+    $query = "SELECT type FROM users WHERE email='$email' LIMIT 1";
+    $result = mysqli_query($conn, $query);
+    $value = $result->fetch_row();
+    $_SESSION['type'] = $value[0];
     if($_SESSION['type']=="admin"){ //checks if user is logged in
     }
     else{
