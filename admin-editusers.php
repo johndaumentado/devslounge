@@ -238,9 +238,10 @@
             $id = $_GET['user_id'];
             $_SESSION['user_id'] = $id;
             $id_exists = true;
-			$con = mysqli_connect("localhost", "root", "", "devslounge") or die(mysqli_error()); //Connect to server
+
+            include_once 'includes/dbconnect.php' or die(mysqli_error()); //Connect to server
             $sql = "SELECT * from users WHERE user_id='$id'";
-            $query = mysqli_query($con, $sql); // SQL Query
+            $query = mysqli_query($conn, $sql); // SQL Query
             $count = mysqli_num_rows($query);
 
             if($count > 0)
@@ -296,7 +297,7 @@
             $name = ($_POST['name']);
             $id = $_SESSION['user_id'];
 
-            mysqli_query($con, "UPDATE users SET name='$name' WHERE user_id='$id'");
+            mysqli_query($conn, "UPDATE users SET name='$name' WHERE user_id='$id'");
             header("location: admin-monitorusers.php");
     }
 ?>

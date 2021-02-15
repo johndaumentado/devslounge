@@ -122,11 +122,7 @@
 				<?php
 
 					//For adding contents to table
-					$dbServername = "localhost";
-					$dbUsername = "root";
-					$dbPassword = "";
-					$dbName = "devslounge";
-					$conn = mysqli_connect ($dbServername, $dbUsername, $dbPassword, $dbName) or die(mysqli_error()); // connect to server 
+					include_once 'includes/dbconnect.php'or die(mysqli_error()); // connect to server 
 
 					$sql = "SELECT name,email FROM users WHERE type LIKE 'dev'";
 					$result = $conn->query($sql);
