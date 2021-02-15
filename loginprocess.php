@@ -13,7 +13,7 @@
 
     $query = "SELECT * from users WHERE email='$email'";
     $results = mysqli_query($con, $query); //Query the users table if there are matching rows equal to $email
-    $exists = mysqli_num_rows($con, $query); //Checks if username exists
+    //$exists = mysqli_num_rows($con, $query); //Checks if username exists
     $table_email = "";
     $table_password = "";
 
