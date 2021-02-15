@@ -33,11 +33,12 @@
 
         <!--Icon-->
 
-        <link rel = "icon" href = "title-icon.png"> -->
+        <link rel = "icon" href = "img/logo-icon.png"> -->
 
         <!--Styles-->
 
         <style>
+
 
             table {
 
@@ -49,22 +50,22 @@
             }
 
             th {
-                
+
                 font-size:20pt;
                 font-weight:bold;
                 border: 3px solid #0a0c24;
-                text-align:center;
                 padding:10px;
-        
+
             }
 
             td {
-                
+
                 font-size:16pt;
                 font-weight:bold;
                 border: 3px solid #0a0c24;
                 text-align:center;
-        
+                margin:10px;
+
             }
 
         </style>
@@ -80,19 +81,23 @@
 
     <!-- Navbar -->
 
-		<?php include('admin-nav.php'); ?>
+		<?php include('navbar.php'); ?>
+
+        <br />
+        <br />
+        <br />
 
             <h2 align="center">Job Postings</h2>
             <table>
-            <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Post Time</th>
-            <th>Edit Time</th>
-            <th>Edit</th>
-            <th>Delete</th>
-            </tr>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Post Time</th>
+                    <th>Edit Time</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
             
         <?php
             $dbServername = "localhost";
@@ -105,13 +110,13 @@
             while($row = mysqli_fetch_array($query))
             {
                 Print "<tr>";
-                Print '<td align="center">'. $row['id'] . "</td>";
-                Print '<td align="center">'. $row['details'] . "</td>";
-                Print '<td align="center">'. $row['date_posted']. " - ". $row['time_posted']."</td>";
-                Print '<td align="center">'. $row['date_edited']. " - ". $row['time_edited']. "</td>";
-                Print '<td align="center"><a href="edit.php?id='. $row['id'] .'">edit</a> </td>';
-                Print '<td align="center"><a href="#" onclick="myFunction('.$row['id'].')">delete</a> </td>';
-                Print '<td align="center">'. $row['public']. "</td>";
+                Print '<td align="center" style = "padding:10px;">'. $row['id'] . "</td>";
+                Print '<td align="center" style = "padding:10px;">'. $row['details'] . "</td>";
+                Print '<td align="center" style = "padding:10px;">'. $row['date_posted']. " - ". $row['time_posted']."</td>";
+                Print '<td align="center" style = "padding:10px;">'. $row['date_edited']. " - ". $row['time_edited']. "</td>";
+                Print '<td align="center" style = "padding:10px;"><a href="edit.php?id='. $row['id'] .'">edit</a> </td>';
+                Print '<td align="center" style = "padding:10px;"><a href="#" onclick="myFunction('.$row['id'].')">delete</a> </td>';
+                Print '<td align="center" style = "padding:10px;">'. $row['public']. "</td>";
                 Print "</tr>";
             }
         ?>
