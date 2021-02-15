@@ -100,12 +100,7 @@
                 </tr>
             
         <?php
-            $dbServername = "localhost";
-            $dbUsername = "root";
-            $dbPassword = "";
-            $dbName = "devslounge";
-            $conn = mysqli_connect ($dbServername, $dbUsername, $dbPassword, $dbName); //Connect to server
-
+            include_once 'includes/dbconnect.php'; //Connect to server
             $query = mysqli_query($conn, "Select * from job_postings"); // SQL Query
             while($row = mysqli_fetch_array($query))
             {

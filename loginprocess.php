@@ -4,12 +4,7 @@
 
     $email = ($_POST['email']);
     $password = ($_POST['pass']);
-    $db_name = "devslounge"; // Subject to change
-    $db_username = "root";
-    $db_pass = "";
-    $db_host = "localhost";
-    $con = mysqli_connect("$db_host", "$db_username", "$db_pass", "$db_name") or
-        die(mysqli_error()); //Connect to server
+    include_once 'includes/dbconnect.php';
 
     $query = "SELECT * from users WHERE email='$email'";
     $results = mysqli_query($con, $query); //Query the users table if there are matching rows equal to $email
