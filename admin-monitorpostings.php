@@ -100,8 +100,7 @@
                 </tr>
             
         <?php
-        
-            include_once 'includes/dbconnect.php' //Connect to server
+            include_once 'includes/dbconnect.php'; //Connect to server
             $query = mysqli_query($conn, "Select * from job_postings"); // SQL Query
             while($row = mysqli_fetch_array($query))
             {
