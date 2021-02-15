@@ -42,25 +42,28 @@
 
 		}
 
-		/* Register */
-		h4 {
 
-		text-align:center;
-		font-family:'Quicksand', sans-serif;
-		font-size:12pt;
-		color:#360568;
+		/* Button Design */
+		button {
+
+			color:#fff;
+			background-color: #8a00e6;
+			padding: 10px;
+			border-radius: 5px;
+			width:50%;
+			border: none;
+			border-radius:20px;
+			float:center;
+			font-family:'Roboto', sans-serif;
+			font-size:14pt;
 
 		}
 
-		a {
-
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-family:'Roboto', sans-serif;
-		color:#7161ef;
-		font-size:10pt;
+		button:hover{
+			opacity: .8;
+			transition:all .5s;
 		}
+
 
 		</style>
 		
