@@ -86,7 +86,7 @@
 			
 				<p>
 					<label>Email</label>
-					<input type="text" id="email" name="email"  placeholder="Enter your Email" />
+                    <input type="text" id="email" name="email"  placeholder="Enter your Email" />
 				</p>
 				<p>
 					<label>Password</label>
@@ -96,7 +96,10 @@
 				<p>
 					<center><button type="submit"> Login </button>
 				</p>
-
+                <?php if(!isset($_SESSION)){
+                        error_reporting(0);
+                         session_start(); 
+                         $_SESSION['email'] = $_POST['email']; } ?>
 				<br/>
 				<h4>
 					Don't Have An Account Yet?
