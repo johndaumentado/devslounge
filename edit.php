@@ -30,7 +30,7 @@
  $id = $_GET['id'];
  $_SESSION['id'] = $id;
  $id_exists = true;
- $con = mysqli_connect("localhost", "root", "", "devslounge") or die(mysqli_error()); //Connect to server
+ include_once 'includes/dbconnect.php';
  $sql = "Select * from list Where id='$id'";
  $query = mysqli_query($con, $sql); // SQL Query
  $count = mysqli_num_rows($query);
