@@ -25,50 +25,7 @@
         <!--Styles-->
 
         <link href = "style/logindesign.css" rel = "stylesheet" type = "text/css">
-
-		<style>
-
-		body {
-
-		background: linear-gradient(
-			to right bottom,
-			rgba(118, 102, 240, 1),
-			rgba(90, 24, 154, 1)
-		);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100vh;
-
-		}
-
-
-		/* Button Design */
-		button {
-
-			color:#fff;
-			background-color: #8a00e6;
-			padding: 10px;
-			border-radius: 5px;
-			width:50%;
-			border: none;
-			border-radius:20px;
-			float:center;
-			font-family:'Roboto', sans-serif;
-			font-size:14pt;
-
-		}
-
-		button:hover{
-			opacity: .8;
-			transition:all .5s;
-		}
-
-
-		</style>
 		
-
-
     </head>
 
 	<body>
@@ -96,11 +53,13 @@
 				<p>
 					<center><button type="submit"> Login </button>
 				</p>
+				
                 <?php if(!isset($_SESSION)){
                         error_reporting(0);
                          session_start(); 
                          $_SESSION['email'] = $_POST['email']; } ?>
 				<br/>
+
 				<h4>
 					Don't Have An Account Yet?
 					<br />
