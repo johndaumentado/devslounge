@@ -136,7 +136,7 @@
 						// If logged in as admin 
 						if(isset($_SESSION['type'])&& $_SESSION['type']=="admin") {
 
-							echo  '<li class="nav-item"><a class="nav-link" href="control-users.php">Control Panel</a></li>
+							echo  '<li class="nav-item"><a class="nav-link" href="control-users.php">Users</a></li>
 								<li class="nav-item"><a class="nav-link" href="control-jobpostings.php">Job Postings</a></li>
 								<li class="nav-item"><a class="nav-link" href="logout.php">Log Out</a></li>'; //add a button for this instead. 
 						}
