@@ -22,24 +22,12 @@
 }
 
 
-.home-text {
-
-    margin-top: 10px;
-    padding-top:30px;
-    padding-right:50px;
-    position:absolute;
-    text-align:justify;
-    font-family: 'Roboto', sans-serif;
-    color:#4e148c;
-    font-size:14pt;
-
-}
-
 /* For Button*/
 .container-button {
 
-    padding-top:180px;
-    padding-left:220px;
+    padding-top:80px;
+    padding-left:250px;
+    position:static;
 
 }
 
@@ -63,34 +51,18 @@
 
     
     /* Featured Developers */
-    h1 {
-
-        font-size: 24pt !important;
-        font-family: 'Quicksand', sans-serif;
-        font-weight: bolder;
-        text-align:center;
-        background-color: #ffffff;
-        color:#4338bc;
-        padding-bottom:30px;
-        
-    }
 
     .panel {
 
-        border: 1px solid #98aae1;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        font-family: 'Calibri', sans-serif;
         width: 250px;
         min-height: 250px;
+        font-family: 'Quicksand', sans-serif;
 
     }
 
     .panel-heading {
 
-        padding-left:20px;
-        padding-bottom:30px;
-        font-size: 10pt;
+        padding:20px;
         line-height: 12pt;
         background-color: #8367c7;
         color: #ffff;
@@ -98,21 +70,17 @@
 
     }
 
-    .panel-heading img {
-
-        width:30%;
-        margin-right:10px;
-        float:left;
-        border-radius: 100px;
-
+    h2 {
+       
+        font-weight: bold;
+        text-align:center;
 
     }
 
-    b {
+    h4 {
+       
+        text-align:center;
 
-        font-size:14pt;
-        letter-spacing: 1pt;
     }
-    
   
 

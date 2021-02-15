@@ -122,44 +122,34 @@
 
                                     echo '</div>';
 
-
-                                    // connect to database
-                                    // get job posting details
-
-                                    $dbServername = "localhost";
-                                    $dbUsername = "root";
-                                    $dbPassword = "";
-                                    $dbName = "devslounge";
-                                    $conn = mysqli_connect ($dbServername, $dbUsername, $dbPassword, $dbName) or die(mysqli_error()); //connect to server 
-
-                                    //$_SESSION['id'] = $id; //type of login
-                                    $id_exists = true;
-
-                                    $sql = "SELECT * from job_postings WHERE job_id='$job_id'"; // select from jobpostings table
-
-                                    //$clientID = $result->fetch_row();
-
-                                    //$job_id = $_GET['job_id'];
-                                    //$job_id = $clientResults[0];
-
-                                    $query = mysqli_query($conn, $sql); // SQL Query
-                                    $count = mysqli_num_rows($query);
-
-                                    if($count > 0)
+                                    if(!empty($_GET['job_id']))
                                     {
-                                        while($row = mysqli_fetch_array($query))
+                                        $job_id = $_GET['job_id'];
+                                        $_SESSION['job_id'] = $job_id;
+                                        $id_exists = true;
+                                        $conn = mysqli_connect("localhost", "root", "", "devslounge") or die(mysqli_error()); //Connect to server
+                                        $sql = "Select * from job_postings Where job_id='$job_id'";
+                                        $query = mysqli_query($conn, $sql); // SQL Query
+                                        $count = mysqli_num_rows($query);
+
+                                        if($count > 0)
                                         {
-                                            Print "<tr>";
-                                            Print '<td style = "text-align:center; padding:10px">'. $row['title'] . "</td>";
-                                            Print '<td style = "text-align:center; padding:10px">'. $row['description']. "</td>";
-                                            Print '<td style = "text-align:center; padding:10px">'. $row['client_id']. "</td>";
-                                            Print "</tr></table><br/>";
+                                            while($row = mysqli_fetch_array($query))
+                                            {
+                                                Print "<tr>";
+                                                Print '<td align="center">'. $row['title'] . "</td>";
+                                                Print '<td align="center">'. $row['description'] . "</td>";
+                                                Print '<td align="center">'. $row['name'] . "</td>";
+                                                Print '<td align="center">'. $row['email'] . "</td>";
+                                                Print "</tr></table></div><br/>";
+                                                $details = $row['details'];
+                                            }
                                         }
-                                    }
 
-                                    else
-                                    {
-                                        $id_exists = false;
+                                        else
+                                        {
+                                            $id_exists = false;
+                                        }
                                     }
 
                                 echo '</table>';

@@ -7,6 +7,7 @@
     $comparisonCheck = true;
     $query = "SELECT * from users";
     $results = mysqli_query($conn, $query); //Query the users table
+    
     while($row = mysqli_fetch_array($results)){ //fetch all data
         $table_users = $row['email']; // the first email row is passed on to $table_users, and so on until the query is finished
         if($email == $table_users){

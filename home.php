@@ -1,8 +1,5 @@
 <!-- DevsLounge Home -->
-<?php 
-    //session_start();
-    //$_SESSION['type']= "client";
-?>
+
 <!DOCTYPE html>
 
 <html lang = "en">
@@ -23,52 +20,12 @@
 
         <!--Icon-->
 
-        <link rel = "icon" href = "logo-icon.png">
+        <link rel = "icon" href = "img/logo-icon.png">
 
         <!--Styles-->
 
     	<link href = "style/home.css" rel = "stylesheet" type = "text/css">
 
-		<style>
-
-		/* Font Imports */
-		@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
-		@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-		.home-heading {
-
-			font-size: 24pt !important;
-			font-family: 'Quicksand', sans-serif;
-			font-weight: bolder;
-			text-align:center;
-			background-color: #ffffff;
-			color:#4338bc;
-			padding-top:80px;
-
-		}
-
-		.home-contents {
-
-			margin-top:10px;
-			padding:50px;
-		}
-
-
-		.home-text {
-
-			margin-top: 10px;
-			padding-top:30px;
-			padding-right:50px;
-			position:absolute;
-			text-align:justify;
-			font-family: 'Roboto', sans-serif;
-			color:#4e148c;
-			font-size:14pt;
-
-		}
-		</style>
-
-	
 
     </head>
 
@@ -102,18 +59,16 @@
 
 								<div class = "home-heading">
 
-
 									Welcome to DevsLounge!
+
+									<br />
+							
+									<h4 style = "font-size:14pt;color:#3c096c;">
+										A developer's remote lounge at home. 
+									</h4>
 
 								</div>
 							</div>
-
-					
-							<div class = "home-text">
-							
-								Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-
-							</div>    
 
 						</div>
 
@@ -157,34 +112,60 @@
 		<br />
 
 
+
+
 		<div class = "container">
+		<center>
 
 			<div class = "row">
-			
-				<!--Developer 1-->
-				<div class="col-sm">
-					<div class="panel">
 
-						<div class=panel-heading>
+				<?php
 
-							<b>Joshua Perez</b>
-							<br />
-							Software Developer 
-							<br />
-							Php300.00/hour 
+					//For adding contents to table
+					$dbServername = "localhost";
+					$dbUsername = "root";
+					$dbPassword = "";
+					$dbName = "devslounge";
+					$conn = mysqli_connect ($dbServername, $dbUsername, $dbPassword, $dbName) or die(mysqli_error()); // connect to server 
 
-                    
-                    </div>
+					$sql = "SELECT name,email FROM users WHERE type LIKE 'dev'";
+					$result = $conn->query($sql);
 
-						<div class=panel-body>
-							Insert Skills here
-						</div>
+					// resut per dev
+					if ($result->num_rows > 0) {
+						while($row = $result->fetch_assoc()) {
 
-					</div>
-				</div>
+							echo '<div class="col-sm-4">
+								<div class="panel">
+
+									<div class=panel-heading>';
+
+										echo '<h2>' . $row['name'] . '</h2>'; 
+										echo  '<h4>' . $row['email'] . '</h4>';
+
+							
+									echo '</div>
+
+									</div>
+							</div>';
+
+						}
+
+					} 
+					
+						else {
+								echo "0 results";
+							}
+
+					
+
+						
+
+				?>
 
 
 			</div>
+		</center>
 		</div>
 
 		<!--Footer-->

@@ -2,15 +2,12 @@
 
 <?php 
 
-    //session_start(); // starts the session
-
-    /*if($_SESSION['admin']){ //checks if user is logged in
+    session_start(); // starts the session
+    if($_SESSION['type']=="admin"){ //checks if user is logged in
     }
     else{
     header("location:login.php"); // redirects if user is not logged in
     }
-    $user = $_SESSION['user']; //assigns user value ??
-    */
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +29,7 @@
 
         <!--Icon-->
 
-        <link rel = "icon" href = "title-icon.png"> -->
+        <link rel = "icon" href = "img/logo-icon.png"> -->
 
         <!--Styles-->
 
@@ -63,6 +60,7 @@
                 font-weight:bold;
                 border: 3px solid #0a0c24;
                 text-align:center;
+                margin:10px;
         
             }
 
@@ -81,7 +79,10 @@
 
 		<?php include('navbar.php'); ?>
             <br>
+
+
             <h2 align="center">Users</h2>
+            <center>
             <table>
             <tr>
             <th style="text-align: center;">Name</th>
@@ -110,6 +111,13 @@
                 Print '<td align="center">'. $row['type']. "</td>";
 				print '<td align="center"><a href="edit.php" onclick="myFunction(' . $row['user_id'] . ')">Edit</a> </td>';
 				print '<td align="center"><a onclick="myFunction(' . $row['user_id'] . ')">Delete</a> </td>';
+                Print '<td align="center"; style = "padding:10px;">'. $row['user_id'] . "</td>";
+                Print '<td align="center" style = "padding:10px;">'. $row['name'] . "</td>";
+                Print '<td align="center" style = "padding:10px;">'. $row['email']. "</td>";
+                Print '<td align="center" style = "padding:10px;">'. $row['password']. "</td>";
+                Print '<td align="center" style = "padding:10px;">'. $row['type']. "</td>";
+				print '<td align="center" style = "padding:10px;"><a href="edit.php" onclick="myFunction(' . $row['user_id'] . ')">Edit</a> </td>';
+				print '<td align="center" style = "padding:10px;"><a onclick="myFunction(' . $row['user_id'] . ')">Delete</a> </td>';
 
                 Print "</tr>";
             }

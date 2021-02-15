@@ -99,7 +99,7 @@
 		// If logged in as admin
 		if(isset($_SESSION['type'])&& $_SESSION['type']=="admin") {
 
-			echo '<a class="navbar-brand" href="home.php">
+			echo '<a class="navbar-brand" href="admin-controlpanel.php">
 		 	<div class=main-logo>
     			<img src="img/devslounge-admin.png" width="480" height="70" alt="logo">
 			</div>
@@ -121,13 +121,7 @@
 
 		?>
 
-	
-		<!-- Navbar Collapse -->
-		<!--
-       	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+
 
 			<!--Navbar Contents-->
 			<div class = "container-fluid">
@@ -139,8 +133,8 @@
 						// If logged in as admin 
 						if(isset($_SESSION['type'])&& $_SESSION['type']=="admin") {
 
-							echo  '<li class="nav-item"><a class="nav-link" href="control-users.php">Users</a></li>
-								<li class="nav-item"><a class="nav-link" href="control-jobpostings.php">Job Postings</a></li>
+							echo  '<li class="nav-item"><a class="nav-link" href="admin-monitorusers.php">Users</a></li>
+								<li class="nav-item"><a class="nav-link" href="admin-monitorpostings.php">Job Postings</a></li>
 								<li class="nav-item"><a class="nav-link" href="logout.php">Log Out</a></li>'; //add a button for this instead. 
 						}
 						
