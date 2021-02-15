@@ -99,7 +99,7 @@
 		// If logged in as admin
 		if(isset($_SESSION['type'])&& $_SESSION['type']=="admin") {
 
-			echo '<a class="navbar-brand" href="home.php">
+			echo '<a class="navbar-brand" href="admin-controlpanel.php">
 		 	<div class=main-logo>
     			<img src="img/devslounge-admin.png" width="480" height="70" alt="logo">
 			</div>
