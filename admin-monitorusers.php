@@ -2,12 +2,16 @@
 
 <?php 
 
-    session_start(); // starts the session
-    if($_SESSION['type']=="admin"){ //checks if user is logged in
-    }
-    else{
-    header("location:login.php"); // redirects if user is not logged in
-    }
+            session_start(); //starts the session   
+            
+            if($_SESSION['user']) { //checks if user is logged in
+            }
+
+            else {
+            header("location:login.php"); // redirects if user is not logged in
+            }
+
+            $user = $_SESSION['user']; //assigns user value
 ?>
 
 <!DOCTYPE html>
@@ -85,6 +89,7 @@
             <center>
             <table>
             <tr>
+            <th style="text-align: center;">ID</th>
             <th style="text-align: center;">Name</th>
             <th style="text-align: center;">Email</th>
             <th style="text-align: center;">Password</th>
@@ -104,20 +109,13 @@
             while($row = mysqli_fetch_array($query))
             {
                 Print "<tr>";
-
+                Print '<td align="center">'. $row['user_id'] . "</td>";
                 Print '<td align="center">'. $row['name'] . "</td>";
                 Print '<td align="center">'. $row['email']. "</td>";
                 Print '<td align="center">'. $row['password']. "</td>";
                 Print '<td align="center">'. $row['type']. "</td>";
-				print '<td align="center"><a href="edit.php" onclick="myFunction(' . $row['user_id'] . ')">Edit</a> </td>';
+				print '<td align="center"><a href="admin-editusers.php?id='. $row['user_id'] . ')">Edit</a> </td>';
 				print '<td align="center"><a onclick="myFunction(' . $row['user_id'] . ')">Delete</a> </td>';
-                Print '<td align="center"; style = "padding:10px;">'. $row['user_id'] . "</td>";
-                Print '<td align="center" style = "padding:10px;">'. $row['name'] . "</td>";
-                Print '<td align="center" style = "padding:10px;">'. $row['email']. "</td>";
-                Print '<td align="center" style = "padding:10px;">'. $row['password']. "</td>";
-                Print '<td align="center" style = "padding:10px;">'. $row['type']. "</td>";
-				print '<td align="center" style = "padding:10px;"><a href="edit.php" onclick="myFunction(' . $row['user_id'] . ')">Edit</a> </td>';
-				print '<td align="center" style = "padding:10px;"><a onclick="myFunction(' . $row['user_id'] . ')">Delete</a> </td>';
 
                 Print "</tr>";
             }
