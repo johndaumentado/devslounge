@@ -1,8 +1,5 @@
 <!-- DevsLounge Home -->
-<?php 
-    //session_start();
-    //$_SESSION['type']= "client";
-?>
+
 <!DOCTYPE html>
 
 <html lang = "en">
@@ -23,52 +20,12 @@
 
         <!--Icon-->
 
-        <link rel = "icon" href = "logo-icon.png">
+        <link rel = "icon" href = "img/logo-icon.png">
 
         <!--Styles-->
 
     	<link href = "style/home.css" rel = "stylesheet" type = "text/css">
 
-		<style>
-
-		/* Font Imports */
-		@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
-		@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-		.home-heading {
-
-			font-size: 24pt !important;
-			font-family: 'Quicksand', sans-serif;
-			font-weight: bolder;
-			text-align:center;
-			background-color: #ffffff;
-			color:#4338bc;
-			padding-top:80px;
-
-		}
-
-		.home-contents {
-
-			margin-top:10px;
-			padding:50px;
-		}
-
-
-		.home-text {
-
-			margin-top: 10px;
-			padding-top:30px;
-			padding-right:50px;
-			position:absolute;
-			text-align:justify;
-			font-family: 'Roboto', sans-serif;
-			color:#4e148c;
-			font-size:14pt;
-
-		}
-		</style>
-
-	
 
     </head>
 
@@ -102,18 +59,16 @@
 
 								<div class = "home-heading">
 
-
 									Welcome to DevsLounge!
+
+									<br />
+							
+									<h4 style = "font-size:14pt;color:#3c096c;">
+										A developer's remote lounge at home. 
+									</h4>
 
 								</div>
 							</div>
-
-					
-							<div class = "home-text">
-							
-								Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-
-							</div>    
 
 						</div>
 
@@ -157,34 +112,94 @@
 		<br />
 
 
+
+
 		<div class = "container">
+		<center>
 
 			<div class = "row">
+
+				<?php
+
+				//For adding contents to table
+				$dbServername = "localhost";
+				$dbUsername = "root";
+				$dbPassword = "";
+				$dbName = "devslounge";
+				$conn = mysqli_connect ($dbServername, $dbUsername, $dbPassword, $dbName) or die(mysqli_error()); // connect to server 
+
+
+					//Developer 1
+
+					echo '<div class="col-sm-4">
+						<div class="panel">
+
+							<div class=panel-heading>';
+
+							$getDev1 = mysqli_fetch_assoc(mysqli_query($conn, "SELECT name,email FROM users WHERE type LIKE 'dev'"));
+							$name1 = $getDev1['name'];
+							$email1 = $getDev1['email'];
+
+
+							echo '<h2>' . $name1 . '</h2>'; 
+							echo  '<h4>' . $email1 . '</h4>';
+
+						
 			
-				<!--Developer 1-->
-				<div class="col-sm">
-					<div class="panel">
+						echo '</div>
 
-						<div class=panel-heading>
-
-							<b>Joshua Perez</b>
-							<br />
-							Software Developer 
-							<br />
-							Php300.00/hour 
-
-                    
-                    </div>
-
-						<div class=panel-body>
-							Insert Skills here
 						</div>
+					</div>';
 
-					</div>
-				</div>
+					//Developer 2
+
+					echo '<div class="col-sm-4">
+						<div class="panel">
+
+							<div class=panel-heading>';
+
+							$getDev2 = mysqli_fetch_assoc(mysqli_query($conn, "SELECT name,email FROM users WHERE type LIKE 'dev'"));
+							$name2 = $getDev2['name'];
+							$email2 = $getDev2['email'];
+
+
+							echo '<h2>' . $name2 . '</h2>'; 
+							echo '<h4>' . $email2 . '</h4>';
+
+						
+			
+						echo '</div>
+
+						</div>
+					</div>';
+
+					//Developer 3
+
+					echo '<div class="col-sm-4">
+						<div class="panel">
+
+							<div class=panel-heading>';
+
+							$getDev3 = mysqli_fetch_assoc(mysqli_query($conn, "SELECT name,email FROM users WHERE type LIKE 'dev'"));
+							$name3 = $getDev3['name'];
+							$email3 = $getDev3['email'];
+
+
+							echo '<h2>' . $name3 . '</h2>'; 
+							echo '<h4>' . $email3 . '</h4>';
+
+						
+			
+						echo '</div>
+
+						</div>
+					</div>';
+				
+				?>
 
 
 			</div>
+		</center>
 		</div>
 
 		<!--Footer-->
