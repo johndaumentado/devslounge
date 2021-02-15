@@ -1,63 +1,4 @@
-
-
-
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-button:hover {
-  opacity:1;
-}
-
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
-}
-
-.container {
-  padding: 16px;
-}
-
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
- 
-.close {
-  position: absolute;
-  right: 35px;
-  top: 15px;
-  font-size: 40px;
-  font-weight: bold;
-  color: #f1f1f1;
-}
-
-.close:hover,
-.close:focus {
-  color: #f44336;
-  cursor: pointer;
-}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-@media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-     width: 100%;
-  }
-}
-
-/*Login CSS */
+/*Register CSS */
 	
 		/* Font Imports */
 		@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
@@ -70,45 +11,48 @@ hr {
 			box-sizing: border-box;
 		}
 
-		/* Background of Login */
 		body {
 
-			background-color: #8a00e6;
+			background: linear-gradient(
+				to right bottom,
+				rgba(118, 102, 240, 1),
+				rgba(90, 24, 154, 1)
+			);
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			height: 100vh;
+			
 
 		}
 
 		/*Heading*/
 		.heading {
 
-			margin-bottom:20px;
+			margin-bottom:10px;
 
 		}
 
 
 		/* Contents inside the Forms */
-		#login{
+		#register{
 
 			background-color: #ffff;
 			width: 500px;
-			padding: 50px;
+			padding: 30px;
+			margin:40px;
 			border-radius: 30px;
 		}
 
-		#login label {
+		#register label {
 			
 			font-family:'Quicksand', sans-serif;
-			font-size:14pt;
+			font-size:12pt;
 		}
 
 		/* Input types in the Form */
 		input[type=text], input[type=password] {
 
 			display: block;
-			border: 2px solid #ccc;
 			width: 95%;
 			padding: 10px;
 			margin-right: 10px auto;
@@ -121,6 +65,13 @@ hr {
             background-color: #ffff;
             outline: none;
           }
+
+		input[type=checkbox] {
+
+			border: 1px solid #b79ced;
+			margin:5px;
+
+		}
 
 		/* Button Design */
 		button {
@@ -142,29 +93,30 @@ hr {
 		}
 
 		/* Register */
-		h4 {
+		h2,h4 {
 
 			text-align:center;
 			font-family:'Quicksand', sans-serif;
-			font-size:14pt;
 			color:#360568;
 
 		}
 
-		a {
-			
-			display: flex;
-			justify-content: center;
-			align-items: center;
+		button {
+
+			color:#fff;
+			background-color: #8a00e6;
+			padding: 10px;
+			border-radius: 5px;
+			width:50%;
+			border: none;
+			border-radius:20px;
+			float:center;
 			font-family:'Roboto', sans-serif;
-			color:#7161ef;
+			font-size:14pt;
+
 		}
 
-		a:hover {
-
-			text-decoration:none;
-			font-family:'Roboto', sans-serif;
-			color:#5b2a86;
+		button:hover{
+			opacity: .8;
+			transition:all .5s;
 		}
-
-

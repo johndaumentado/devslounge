@@ -1,113 +1,86 @@
-<!DOCTYPE html>
-<html>
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+<!--Dev Register-->
 
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
+<html lang = "en">
 
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
+    <head>
 
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
+        <title>
+            Client Register | DevsLounge
+        </title>
+        
+        <meta charset="utf-8">
 
-button:hover {
-  opacity:1;
-}
+        <!--Boostrap-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
-}
+        <!--Icon-->
 
-.container {
-  padding: 16px;
-}
+        <link rel = "icon" href = "img/logo-icon.png"> 
 
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
- 
-.close {
-  position: absolute;
-  right: 35px;
-  top: 15px;
-  font-size: 40px;
-  font-weight: bold;
-  color: #f1f1f1;
-}
+        <!--Styles-->
 
-.close:hover,
-.close:focus {
-  color: #f44336;
-  cursor: pointer;
-}
+        <link href = "style/registerdesign.css" rel = "stylesheet" type = "text/css">
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
 
-@media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-     width: 100%;
-  }
-}
-</style>
-<body>
-<body style="background-color:black;">
-	<form action="includes/devRegProcess.php" method="POST">
-    <div class="signup-form-form">
-      <h1><p style="color:White">Developer Sign Up</p></h1>
-      <p style="color:White">Please fill in this form to create an account.</p>
-	  
-	  <p style="color:White"><label for="name"><b>Full Name</b></label>
-      <input type="text" placeholder="Enter Name" name="name" required>
-	  
-	  <p style="color:White"><label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" id="email" required>
+	</head>
+
 		
-      <label for="password"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="password" required>
+	<body>
 
-      <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-	  <p style="color:White"><label for="name"><b>Which Programming Languages do you use?</b></label><br />
-		<input type="checkbox" name="language[]" value="HTML/CSS" />HTML/CSS<br />
-		<input type="checkbox" name="language[]" value="PHP" />PHP<br />
-		<input type="checkbox" name="language[]" value="C++" />C++<br />
-		<input type="checkbox" name="language[]" value="Python" />Python<br />
-		<input type="checkbox" name="language[]" value="Java" />Java<br />
-		<input type="checkbox" name="language[]" value="C#" />C#<br />
-		<br />
-      </p>
-      <div class="clearfix">
-        <button type="submit" class="signupbtn">Sign Up</button>
-      </div>
-	  
-    </div>
-  </form>
-</div>
-</body>
+		<!--Register Contents-->
+		<div id = "register">
+
+			<div class = "heading">
+				<center>	
+					<img src="img/devslounge-logo.png" width="250" height="70" alt="logo">
+				</center>
+			</div>
+		
+			<form action="includes/devRegProcess.php" method="POST">
+
+				<h2>Developer Sign Up</h2>
+				<h4>Please fill in this form to create an account.</h4>
+				
+				<label for="name">Full Name</label>
+				<input type="text" placeholder="Enter Name" name="name" required>
+
+				<br />
+				
+				<label for="email">Email</label>
+				<input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+				<br />
+					
+				<label for="password">Password</label>
+				<input type="password" placeholder="Enter Password" name="password" required>
+
+				<br />
+
+				<label for="name">Which Programming Languages do you use?</label><br />
+					<label>
+					<input type="checkbox" name="language[]" value="HTML/CSS" />HTML/CSS<br />
+					<input type="checkbox" name="language[]" value="PHP" />PHP<br />
+					<input type="checkbox" name="language[]" value="C++" />C++<br />
+					<input type="checkbox" name="language[]" value="Python" />Python<br />
+					<input type="checkbox" name="language[]" value="Java" />Java<br />
+					<input type="checkbox" name="language[]" value="C#" />C#<br />
+					<br />
+
+					</label>
+
+			
+				<center><button type="submit" class="signupbtn">Sign Up</button></center>
+			
+				
+				</div>
+
+			</form>
+		
+		</div>
+	
+	</body>
 </html>
 

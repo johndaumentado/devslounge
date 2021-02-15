@@ -24,8 +24,7 @@
 			align-items: center;
 			height: 100vh;
 	
-			}
-
+		}
 
 
 		/*Heading*/
@@ -83,12 +82,14 @@
 			float:center;
 			font-family:'Roboto', sans-serif;
 			font-size:14pt;
+
 		}
 
 		button:hover{
 			opacity: .8;
 			transition:all .5s;
 		}
+
 
 		/* Register */
 		h4 {
