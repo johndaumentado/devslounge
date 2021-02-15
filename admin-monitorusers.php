@@ -81,6 +81,7 @@
             <h2 align="center">Users</h2>
             <table>
             <tr>
+			<th>ID</th>
             <th>Name</th>
             <th>Email</th>
             <th>Password</th>
